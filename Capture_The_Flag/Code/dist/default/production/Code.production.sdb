@@ -102,9 +102,99 @@
 [v ___tmul __tmul `(um  1 e 3 0 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"11 C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c
+"42 C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c
 [v _main main `(v  1 e 0 0 ]
-"1986 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
+"116
+[v _startUp startUp `(v  1 e 0 0 ]
+"131
+[v _isr isr `II(v  1 e 0 0 ]
+"147
+[v _initializeInt initializeInt `(v  1 e 0 0 ]
+"156
+[v _initializeTimer1 initializeTimer1 `(v  1 e 0 0 ]
+"163
+[v _initializeTimer0 initializeTimer0 `(v  1 e 0 0 ]
+"50 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S19 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S28 . 1 `S19 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES28  1 e 1 @6 ]
+[s S65 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"319
+[s S74 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 INTE 1 0 :1:4 
+]
+[u S79 . 1 `S65 1 . 1 0 `S74 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES79  1 e 1 @11 ]
+[s S97 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"389
+[u S105 . 1 `S97 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES105  1 e 1 @12 ]
+[s S135 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 T1RUN 1 0 :1:6 
+]
+"501
+[s S142 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[u S148 . 1 `S135 1 . 1 0 `S142 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES148  1 e 1 @16 ]
+[s S165 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1003
+[s S172 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S176 . 1 `S165 1 . 1 0 `S172 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES176  1 e 1 @129 ]
+"1113
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1190
+[v _PIE1bits PIE1bits `VES105  1 e 1 @140 ]
+"1295
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"1986
 [v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
 "1992
 [v _EEADR EEADR `VEuc  1 e 1 @269 ]
@@ -118,12 +208,65 @@
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "2290
 [v _RD RD `VEb  1 e 0 @3168 ]
+"2356
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"2358
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2362
+[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
+"2364
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
 "2458
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2460
 [v _WREN WREN `VEb  1 e 0 @3170 ]
-"11 C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c
+"40 C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c
+[v _tflag tflag `i  1 e 2 0 ]
+"42
 [v _main main `(v  1 e 0 0 ]
 {
-"13
+"52
+[v main@fivemin fivemin `i  1 a 2 16 ]
+"50
+[v main@t2counter t2counter `i  1 a 2 14 ]
+"49
+[v main@t1counter t1counter `i  1 a 2 12 ]
+"51
+[v main@fivef fivef `i  1 a 2 10 ]
+"48
+[v main@team2count team2count `i  1 a 2 8 ]
+"47
+[v main@team1count team1count `i  1 a 2 6 ]
+"46
+[v main@team2 team2 `i  1 a 2 4 ]
+"45
+[v main@team1 team1 `i  1 a 2 2 ]
+"44
+[v main@counter counter `i  1 a 2 0 ]
+"114
+} 0
+"116
+[v _startUp startUp `(v  1 e 0 0 ]
+{
+"125
+} 0
+"156
+[v _initializeTimer1 initializeTimer1 `(v  1 e 0 0 ]
+{
+"161
+} 0
+"163
+[v _initializeTimer0 initializeTimer0 `(v  1 e 0 0 ]
+{
+"167
+} 0
+"147
+[v _initializeInt initializeInt `(v  1 e 0 0 ]
+{
+"154
+} 0
+"131
+[v _isr isr `II(v  1 e 0 0 ]
+{
+"145
 } 0

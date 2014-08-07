@@ -1265,7 +1265,180 @@ extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsi
 #pragma intrinsic(_delay)
 extern void _delay(unsigned long);
 
-# 11 "ctf.c"
+# 3 "C:\Program Files (x86)\Microchip\xc8\v1.20\include\math.h"
+extern double fabs(double);
+extern double floor(double);
+extern double ceil(double);
+extern double modf(double, double *);
+extern double sqrt(double);
+extern double atof(const char *);
+extern double sin(double);
+extern double cos(double);
+extern double tan(double);
+extern double asin(double);
+extern double acos(double);
+extern double atan(double);
+extern double atan2(double, double);
+extern double log(double);
+extern double log10(double);
+extern double pow(double, double);
+extern double exp(double);
+extern double sinh(double);
+extern double cosh(double);
+extern double tanh(double);
+extern double eval_poly(double, const double *, int);
+extern double frexp(double, int *);
+extern double ldexp(double, int);
+extern double fmod(double, double);
+extern double trunc(double);
+extern double round(double);
+
+
+# 14 "ctf.c"
+#pragma config FOSC = INTOSCIO
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config BOREN = ON
+#pragma config LVP = OFF
+#pragma config CPD = OFF
+#pragma config WRT = OFF
+#pragma config CCPMX = RB0
+#pragma config CP = OFF
+
+
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+void startUp();
+void initializeInt();
+void initializeTimer1();
+void initializeTimer0();
+
+# 40
+int tflag = 0;
+
 void main(void) {
-return;
+
+int counter = 0;
+int team1 = 0;
+int team2 = 0;
+int team1count = 0;
+int team2count = 0;
+int t1counter = 0;
+int t2counter = 0;
+int fivef = 0;
+int fivemin = 0;
+
+PORTBbits.RB0 = 0;
+PORTBbits.RB1 = 0;
+
+startUp();
+for(;;){
+if(tflag){
+tflag = 0;
+
+if(team1count){
+t1counter++;
 }
+if(team2count){
+t2counter++;
+}
+if(fivef){
+fivemin++;
+}
+}
+if(t1counter >= 2451)
+{
+t1counter = 0;
+PORTBbits.RB0 = 1;
+PORTBbits.RB1 = 0;
+team1 = 1;
+team2 = 0;
+fivef = 1;
+fivemin = 0;
+}
+if(t2counter >= 2451)
+{
+t2counter = 0;
+PORTBbits.RB0 = 0;
+PORTBbits.RB1 = 1;
+team1 = 0;
+team2 = 1;
+fivef = 1;
+fivemin = 0;
+}
+if(fivemin >= 4902){
+PORTBbits.RB5 = 1;
+}
+
+if(PORTBbits.RB2){
+team1count = 1;
+
+}
+else{
+team1count = 0;
+t1counter = 0;
+}
+
+if(PORTBbits.RB3){
+team2count = 1;
+}
+else{
+team2count = 0;
+t2counter = 0;
+}
+
+}
+}
+
+void startUp(){
+OSCCON = 0x70;
+
+TRISB = 0b1011100;
+PORTB = 0;
+
+initializeInt();
+initializeTimer0();
+initializeTimer1();
+}
+
+# 131
+void interrupt isr(void){
+
+
+if(TMR1IF){
+TMR1IF = 0;
+
+
+}
+
+if(TMR0IF){
+TMR0IF = 0;
+TMR0 = 0;
+tflag = 1;
+}
+}
+
+void initializeInt(){
+TMR1IE = 1;
+TMR0IE = 1;
+(GIE = 1);
+INTCONbits.PEIE = 1;
+PIR1bits.RCIF = 0;
+PIE1bits.RCIE = 0;
+}
+
+void initializeTimer1(){
+T1CONbits.T1CKPS = 0b00;
+T1CONbits.T1OSCEN = 1;
+T1CONbits.TMR1CS = 0;
+T1CONbits.TMR1ON = 1;
+}
+
+void initializeTimer0(){
+OPTION_REGbits.T0CS = 0;
+OPTION_REGbits.PSA = 0;
+OPTION_REGbits.PS = 0b100;
+}
+

@@ -34,16 +34,14 @@ void initializeTimer0();
 
 //Defines
 #define sf_DEBUG   PORTBbits.RB5    //Debug LED - Mostly to see what's actually going on
-#define sf_TEAM1i  PORTBbits.RB0    //Team 1 Button
-#define sf_TEAM2i  PORTBbits.RB1    //Team 2 Button
-#define sf_TEAM1o  PORTBbits.RB2    //Team 1 Output - Set LED for team 1 on (RED)
-#define sf_TEAM2o  PORTBbits.RB3    //Team 2 Output - Set LED for team 2 on (BLUE)
-#define sf_DEFAULT PORTBbits.RB4    //Default LED
-
-int tflag = 0;          //Flag set when interrupt is triggered (4ms)
+#define sf_TEAM1o  PORTBbits.RB0    //Team 1 Output - Set LED for team 1 on (RED)
+#define sf_TEAM2o  PORTBbits.RB1    //Team 2 Output - Set LED for team 2 on (BLUE)
+#define sf_TEAM1i  PORTBbits.RB2    //Team 1 Button
+#define sf_TEAM2i  PORTBbits.RB3    //Team 2 Button
 
 void main(void) {
 
+    int tflag = 0;          //Flag set when interrupt is triggered (4ms)
     int counter = 0;        //Keep track of the number of seconds a button is pressed
     //Flags to see which team has pressed the button
     int team1 = 0;
@@ -54,17 +52,14 @@ void main(void) {
     int t1counter = 0;      //Team 1 10 second counter
     int t2counter = 0;      //Team 2 10 second counter
     int fivemin = 0;        //Five minute counter
-    int mintrack = 0;
 
     sf_TEAM1o = 0;          //Turn off team 1 LED
     sf_TEAM2o = 0;          //Turn off team 2 LED
 
     startUp();
 
-    sf_DEFAULT = 1;
     for(;;){
         //if 4ms flag set
-        
         if(tflag){
             tflag = 0;//reset 4ms flag
             //increment team 1 counter if team 1 button pressed
@@ -78,42 +73,34 @@ void main(void) {
             if(team1 || team2)
                 fivemin++;
         }
-        //check if team 1 button pushed for 5 seconds
-        if(t1counter >= 1225)
+        //check if team 1 button pushed for 10 seconds
+        if(t1counter >= 2451)
         {
             t1counter = 0;
             t2counter = 0;
             sf_TEAM1o = 1;//Set team 1 LED on
             sf_TEAM2o = 0;//Set team 2 LED off
-            sf_DEFAULT = 0;
             team1 = 1;//Set team 1 active flag
             team2 = 0;
             fivemin = 0;
-            mintrack = 0;
         }
-        //check if team 2 button pushed for 5 seconds
-        if(t2counter >= 1225)
+        //check if team 2 button pushed for 10 seconds
+        if(t2counter >= 2451)
         {
             t1counter = 0;
             t2counter = 0;
             sf_TEAM1o = 0;//Set team 1 LED off
             sf_TEAM2o = 1;//Set team 2 LED on
-            sf_DEFAULT = 0;
             team1 = 0;
             team2 = 1;//Set team 2 active flag
             fivemin = 0;
-            mintrack = 0;
         }
-        //Check if a minute has passed
-        if(fivemin >= 14706){
-            fivemin = 0;
-            mintrack++;
-        }
-        if(mintrack >= 10){
+        //Check if five minutes have passed
+        if(fivemin >= 4902){
             if(team1)//Team 1 win
-                sf_DEFAULT = 1;
+                sf_DEBUG = 1;
             if(team2)//Team 2 win
-                sf_DEFAULT = 1;
+                sf_DEBUG = 1;
         }
         //if Team 1 button is pressed
         if(sf_TEAM1i){
@@ -138,7 +125,7 @@ void main(void) {
 void startUp(){
     OSCCON = 0x70;//Set oscillator for 8MHz
 
-    TRISB = 0b00000011;//Set input (pin 3,4,5,7,8) and output (pin 1,2,6)
+    TRISB = 0b11011100;//Set input (pin 3,4,5,7,8) and output (pin 1,2,6)
     PORTB = 0;//Set initial output to 0
 
     initializeInt();

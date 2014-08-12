@@ -11,22 +11,22 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+$C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 end_init CODE 0 11 11 2 2
 reset_vec CODE 0 0 0 2 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production\Code.production.obj
 intentry CODE 0 4 4 D 2
-text5 CODE 0 B7 B7 15 2
-text4 CODE 0 DE DE D 2
-text3 CODE 0 EB EB 9 2
-text2 CODE 0 F4 F4 8 2
-text1 CODE 0 CC CC 12 2
-maintext CODE 0 13 13 A4 2
+text5 CODE 0 DC DC 15 2
+text4 CODE 0 103 103 D 2
+text3 CODE 0 110 110 9 2
+text2 CODE 0 119 119 8 2
+text1 CODE 0 F1 F1 12 2
+maintext CODE 0 13 13 C9 2
 cstackBANK0 BANK0 1 20 20 12 1
 cstackCOMMON COMMON 1 70 70 4 1
 bssBANK0 BANK0 1 32 32 2 1
-cinit CODE 0 FC FC 5 2
+cinit CODE 0 121 121 5 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -38,13 +38,13 @@ BANK1 00A0-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
 CODE 0002-0003 2
-CODE 0101-0FFF 2
+CODE 0126-0FFF 2
 COMMON 0074-007D 1
 CONST 0002-0003 2
-CONST 0101-0FFF 2
+CONST 0126-0FFF 2
 EEDATA 2100-21FF 2
 ENTRY 0002-0003 2
-ENTRY 0101-0FFF 2
+ENTRY 0126-0FFF 2
 IDLOC 2000-2003 2
 RAM 0034-006F 1
 RAM 00A0-00EF 1
@@ -55,9 +55,9 @@ SFR1 0080-009F 1
 SFR2 0100-010F 1
 SFR3 0180-018F 1
 STRCODE 0002-0003 2
-STRCODE 0101-0FFF 2
+STRCODE 0126-0FFF 2
 STRING 0002-0003 2
-STRING 0101-0FFF 2
+STRING 0126-0FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,91 +72,102 @@ STRING 0101-0FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Code.production.obj
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":131 4 intentry CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":44 13 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":45 17 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":46 19 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":47 1B maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":48 1D maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":49 1F maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":50 21 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":51 23 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":52 25 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":54 27 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":55 28 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":57 29 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":59 2C maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":60 32 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":62 34 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":63 38 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":65 3E maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":66 42 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":68 48 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":69 4C maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":72 52 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":74 5D maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":75 61 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":76 62 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":77 63 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":78 67 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":79 69 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":80 6D maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":82 6F maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":84 7C maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":85 80 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":86 81 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":87 82 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":88 84 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":89 88 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":90 8C maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":92 8E maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":93 9B maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":96 9E maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":97 A2 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":99 A6 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":101 A7 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":102 A9 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":105 AB maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":106 AD maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":107 B1 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":109 B2 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":110 B4 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":113 B6 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":114 B7 maintext CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":134 B7 text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":135 B8 text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":140 B9 text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":141 BB text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":142 BC text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":143 BD text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":145 C1 text5 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":117 CC text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":119 D0 text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":120 D2 text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":122 D5 text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":123 D8 text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":124 DB text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":125 DD text1 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":148 DE text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":149 E1 text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":150 E2 text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":151 E3 text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":152 E4 text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":153 E7 text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":154 EA text4 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":164 EB text3 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":165 EE text3 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":166 EF text3 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":167 F3 text3 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":157 F4 text2 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":158 F8 text2 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":159 F9 text2 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":160 FA text2 CODE
-"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":161 FB text2 CODE
-"C:\Users\Ryan\AppData\Local\Temp\s30g.":231 FC cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s30g.":232 FD cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s30g.":239 FE cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s30g.":240 FF cinit CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":153 4 intentry CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":47 13 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":49 17 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":50 19 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":52 1B maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":53 1D maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":54 1F maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":55 21 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":56 23 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":57 25 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":59 27 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":60 28 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":62 29 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":64 2C maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":68 2F maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":69 33 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":71 35 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":72 39 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":74 3F maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":75 43 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":78 49 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":79 51 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":82 57 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":84 62 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":85 66 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":86 68 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":87 69 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":88 6A maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":89 6B maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":90 6F maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":91 71 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":92 73 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":95 75 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":97 82 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":98 86 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":99 88 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":100 89 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":101 8A maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":102 8B maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":103 8D maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":104 91 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":105 93 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":108 95 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":109 A2 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":110 A6 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":112 AC maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":113 B9 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":114 BE maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":115 BF maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":116 C2 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":119 C3 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":120 C7 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":121 CB maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":123 CC maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":124 CE maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":127 D0 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":128 D2 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":129 D6 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":131 D7 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":132 D9 maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":135 DB maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":136 DC maintext CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":156 DC text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":157 DD text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":162 DE text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":163 E0 text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":164 E1 text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":165 E2 text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":167 E6 text5 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":139 F1 text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":141 F5 text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":142 F7 text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":144 FA text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":145 FD text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":146 100 text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":147 102 text1 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":171 103 text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":172 106 text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":173 107 text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":174 108 text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":175 109 text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":176 10C text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":177 10F text4 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":188 110 text3 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":189 113 text3 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":190 114 text3 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":191 118 text3 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":180 119 text2 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":181 11D text2 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":182 11E text2 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":183 11F text2 CODE
+"C:\Users\Ryan\Documents\GitHub\Airsoft\Capture_The_Flag\Code\ctf.c":184 120 text2 CODE
+"C:\Users\Ryan\AppData\Local\Temp\s2io.":231 121 cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s2io.":232 122 cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s2io.":239 123 cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s2io.":240 124 cinit CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -169,7 +180,7 @@ $dist/default/production\Code.production.obj
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__end_of_startUp 1BC 0 CODE 0 text1 dist/default/production\Code.production.obj
+__end_of_startUp 206 0 CODE 0 text1 dist/default/production\Code.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
 __S0 2009 0 ABS 0 - -
 __S1 74 0 ABS 0 - -
@@ -179,13 +190,13 @@ __Hintentry 22 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\Code.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\Code.production.obj
-_isr 16E 0 CODE 0 text5 dist/default/production\Code.production.obj
+_isr 1B8 0 CODE 0 text5 dist/default/production\Code.production.obj
 _TMR0 1 0 ABS 0 - dist/default/production\Code.production.obj
 _main 26 0 CODE 0 maintext dist/default/production\Code.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Code.production.obj
-start 22 0 CODE 0 init C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+start 22 0 CODE 0 init C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 _TRISB 86 0 ABS 0 - dist/default/production\Code.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 _PORTB 6 0 ABS 0 - dist/default/production\Code.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Code.production.obj
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Code.production.obj
@@ -195,11 +206,11 @@ _tflag 32 0 BANK0 1 bssBANK0 dist/default/production\Code.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_isr 0 0 ABS 0 - dist/default/production\Code.production.obj
-_initializeInt 1BC 0 CODE 0 text4 dist/default/production\Code.production.obj
+_initializeInt 206 0 CODE 0 text4 dist/default/production\Code.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
-_initializeTimer0 1D6 0 CODE 0 text3 dist/default/production\Code.production.obj
-_initializeTimer1 1E8 0 CODE 0 text2 dist/default/production\Code.production.obj
+_initializeTimer0 220 0 CODE 0 text3 dist/default/production\Code.production.obj
+_initializeTimer1 232 0 CODE 0 text2 dist/default/production\Code.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Lcommon 0 0 ABS 0 common -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Code.production.obj
@@ -221,21 +232,20 @@ __Hsfr2 0 0 ABS 0 sfr2 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Hsfr3 0 0 ABS 0 sfr3 -
 __Lsfr3 0 0 ABS 0 sfr3 -
-main@fivef 2A 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __size_of_initializeInt 0 0 ABS 0 - dist/default/production\Code.production.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-main@fivemin 30 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@fivemin 2C 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 saved_w 7E 0 ABS 0 - dist/default/production\Code.production.obj
 __Hinit 22 0 CODE 0 init -
 __Linit 22 0 CODE 0 init -
-__end_of_main 16E 0 CODE 0 maintext dist/default/production\Code.production.obj
+__end_of_main 1B8 0 CODE 0 maintext dist/default/production\Code.production.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
-end_of_initialization 1FC 0 CODE 0 cinit dist/default/production\Code.production.obj
+end_of_initialization 246 0 CODE 0 cinit dist/default/production\Code.production.obj
 _PORTBbits 6 0 ABS 0 - dist/default/production\Code.production.obj
 _T1CONbits 10 0 ABS 0 - dist/default/production\Code.production.obj
 __Hstrings 0 0 ABS 0 strings -
@@ -248,35 +258,35 @@ __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
-___latbits 1 0 ABS 0 - C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+___latbits 1 0 ABS 0 - C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
-main@team1count 26 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@team1count 22 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __ptext0 0 0 CODE 0 text0 dist/default/production\Code.production.obj
-__ptext1 198 0 CODE 0 text1 dist/default/production\Code.production.obj
-main@team2count 28 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__ptext2 1E8 0 CODE 0 text2 dist/default/production\Code.production.obj
-__ptext3 1D6 0 CODE 0 text3 dist/default/production\Code.production.obj
-__ptext4 1BC 0 CODE 0 text4 dist/default/production\Code.production.obj
-__ptext5 16E 0 CODE 0 text5 dist/default/production\Code.production.obj
+__ptext1 1E2 0 CODE 0 text1 dist/default/production\Code.production.obj
+main@team2count 24 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+__ptext2 232 0 CODE 0 text2 dist/default/production\Code.production.obj
+__ptext3 220 0 CODE 0 text3 dist/default/production\Code.production.obj
+__ptext4 206 0 CODE 0 text4 dist/default/production\Code.production.obj
+__ptext5 1B8 0 CODE 0 text5 dist/default/production\Code.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
-__end_of__initialization 1FC 0 CODE 0 cinit dist/default/production\Code.production.obj
+__end_of__initialization 246 0 CODE 0 cinit dist/default/production\Code.production.obj
 main@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
-_startUp 198 0 CODE 0 text1 dist/default/production\Code.production.obj
-__end_of_isr 198 0 CODE 0 text5 dist/default/production\Code.production.obj
+_startUp 1E2 0 CODE 0 text1 dist/default/production\Code.production.obj
+__end_of_isr 1E2 0 CODE 0 text5 dist/default/production\Code.production.obj
 __Hcinit 0 0 ABS 0 cinit -
 __Lcinit 0 0 ABS 0 cinit -
 __size_of_main 0 0 ABS 0 - dist/default/production\Code.production.obj
-__end_of_initializeTimer0 1E8 0 CODE 0 text3 dist/default/production\Code.production.obj
-__end_of_initializeTimer1 1F8 0 CODE 0 text2 dist/default/production\Code.production.obj
+__end_of_initializeTimer0 232 0 CODE 0 text3 dist/default/production\Code.production.obj
+__end_of_initializeTimer1 242 0 CODE 0 text2 dist/default/production\Code.production.obj
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
 __size_of_initializeTimer0 0 0 ABS 0 - dist/default/production\Code.production.obj
-main@team1 22 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@team1 2E 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __size_of_initializeTimer1 0 0 ABS 0 - dist/default/production\Code.production.obj
-main@team2 24 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@team2 30 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __pbssBANK0 32 0 BANK0 1 bssBANK0 dist/default/production\Code.production.obj
@@ -287,29 +297,30 @@ __Hend_init 26 0 CODE 0 end_init -
 __Lend_init 22 0 CODE 0 end_init -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-intlevel0 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s30g.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s2io.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-start_initialization 1F8 0 CODE 0 cinit dist/default/production\Code.production.obj
+start_initialization 242 0 CODE 0 cinit dist/default/production\Code.production.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-__end_of_initializeInt 1D6 0 CODE 0 text4 dist/default/production\Code.production.obj
+__end_of_initializeInt 220 0 CODE 0 text4 dist/default/production\Code.production.obj
 __pmaintext 26 0 CODE 0 maintext dist/default/production\Code.production.obj
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Code.production.obj
 __size_of_startUp 0 0 ABS 0 - dist/default/production\Code.production.obj
 __CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production\Code.production.obj
-__initialization 1F8 0 CODE 0 cinit dist/default/production\Code.production.obj
-main@t1counter 2C 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-main@t2counter 2E 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+__initialization 242 0 CODE 0 cinit dist/default/production\Code.production.obj
+main@mintrack 26 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@t1counter 28 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+main@t2counter 2A 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
 __CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production\Code.production.obj
@@ -331,7 +342,7 @@ __CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production\Code.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 2 2 CODE
-intentry 0 4 8 FD 2 CODE
+intentry 0 4 8 122 2 CODE
 config 0 2007 400E 2 2 CONFIG
 cstackCOMMON 1 70 70 4 1 COMMON
 cstackBANK0 1 20 20 14 1 BANK0

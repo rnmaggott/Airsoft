@@ -1310,78 +1310,98 @@ extern double round(double);
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
 
+
 void startUp();
 void initializeInt();
 void initializeTimer1();
 void initializeTimer0();
 
-# 40
+# 43
 int tflag = 0;
 
 void main(void) {
 
 int counter = 0;
+
 int team1 = 0;
 int team2 = 0;
+
 int team1count = 0;
 int team2count = 0;
 int t1counter = 0;
 int t2counter = 0;
-int fivef = 0;
 int fivemin = 0;
+int mintrack = 0;
 
-PORTBbits.RB0 = 0;
-PORTBbits.RB1 = 0;
+PORTBbits.RB2 = 0;
+PORTBbits.RB3 = 0;
 
 startUp();
+
+PORTBbits.RB4 = 1;
 for(;;){
+
+
 if(tflag){
 tflag = 0;
 
-if(team1count){
+if(team1count)
 t1counter++;
-}
+
 if(team2count){
 t2counter++;
 }
-if(fivef){
+
+if(team1 || team2)
 fivemin++;
 }
-}
-if(t1counter >= 2451)
+
+if(t1counter >= 1225)
 {
 t1counter = 0;
-PORTBbits.RB0 = 1;
-PORTBbits.RB1 = 0;
+t2counter = 0;
+PORTBbits.RB2 = 1;
+PORTBbits.RB3 = 0;
+PORTBbits.RB4 = 0;
 team1 = 1;
 team2 = 0;
-fivef = 1;
 fivemin = 0;
+mintrack = 0;
 }
-if(t2counter >= 2451)
+
+if(t2counter >= 1225)
 {
+t1counter = 0;
 t2counter = 0;
-PORTBbits.RB0 = 0;
-PORTBbits.RB1 = 1;
+PORTBbits.RB2 = 0;
+PORTBbits.RB3 = 1;
+PORTBbits.RB4 = 0;
 team1 = 0;
 team2 = 1;
-fivef = 1;
 fivemin = 0;
-}
-if(fivemin >= 4902){
-PORTBbits.RB5 = 1;
+mintrack = 0;
 }
 
-if(PORTBbits.RB2){
+if(fivemin >= 14706){
+fivemin = 0;
+mintrack++;
+}
+if(mintrack >= 10){
+if(team1)
+PORTBbits.RB4 = 1;
+if(team2)
+PORTBbits.RB4 = 1;
+}
+
+if(PORTBbits.RB0){
 team1count = 1;
-
 }
 else{
 team1count = 0;
 t1counter = 0;
 }
 
-if(PORTBbits.RB3){
+if(PORTBbits.RB1){
 team2count = 1;
 }
 else{
@@ -1395,7 +1415,7 @@ t2counter = 0;
 void startUp(){
 OSCCON = 0x70;
 
-TRISB = 0b1011100;
+TRISB = 0b00000011;
 PORTB = 0;
 
 initializeInt();
@@ -1403,7 +1423,7 @@ initializeTimer0();
 initializeTimer1();
 }
 
-# 131
+# 153
 void interrupt isr(void){
 
 
@@ -1420,6 +1440,7 @@ tflag = 1;
 }
 }
 
+
 void initializeInt(){
 TMR1IE = 1;
 TMR0IE = 1;
@@ -1435,6 +1456,7 @@ T1CONbits.T1OSCEN = 1;
 T1CONbits.TMR1CS = 0;
 T1CONbits.TMR1ON = 1;
 }
+
 
 void initializeTimer0(){
 OPTION_REGbits.T0CS = 0;

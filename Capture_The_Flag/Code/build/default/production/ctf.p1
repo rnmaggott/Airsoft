@@ -8,7 +8,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S8 . . ]
 "233
 [v _PORTBbits `VS8 ~T0 @X0 0 e@6 ]
-"29 ctf.c
+"30 ctf.c
 [v _startUp `(v ~T0 @X0 0 ef ]
 "1295 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
@@ -16,11 +16,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
 "216
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"30 ctf.c
+"31 ctf.c
 [v _initializeInt `(v ~T0 @X0 0 ef ]
-"32
+"33
 [v _initializeTimer0 `(v ~T0 @X0 0 ef ]
-"31
+"32
 [v _initializeTimer1 `(v ~T0 @X0 0 ef ]
 "2364 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
 [v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
@@ -1039,382 +1039,414 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x FCMEN=OFF ]
 "27
 [p x IESO=OFF ]
-[; ;ctf.c: 29: void startUp();
-[; ;ctf.c: 30: void initializeInt();
-[; ;ctf.c: 31: void initializeTimer1();
-[; ;ctf.c: 32: void initializeTimer0();
-"40
+[; ;ctf.c: 30: void startUp();
+[; ;ctf.c: 31: void initializeInt();
+[; ;ctf.c: 32: void initializeTimer1();
+[; ;ctf.c: 33: void initializeTimer0();
+"43
 [v _tflag `i ~T0 @X0 1 e ]
 [i _tflag
 -> 0 `i
 ]
-[; ;ctf.c: 40: int tflag = 0;
-"42
+[; ;ctf.c: 43: int tflag = 0;
+"45
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;ctf.c: 42: void main(void) {
+[; ;ctf.c: 45: void main(void) {
 [e :U _main ]
 [f ]
-"44
-[v _counter `i ~T0 @X0 1 a ]
-[; ;ctf.c: 44: int counter = 0;
-[e = _counter -> 0 `i ]
-"45
-[v _team1 `i ~T0 @X0 1 a ]
-[; ;ctf.c: 45: int team1 = 0;
-[e = _team1 -> 0 `i ]
-"46
-[v _team2 `i ~T0 @X0 1 a ]
-[; ;ctf.c: 46: int team2 = 0;
-[e = _team2 -> 0 `i ]
 "47
-[v _team1count `i ~T0 @X0 1 a ]
-[; ;ctf.c: 47: int team1count = 0;
-[e = _team1count -> 0 `i ]
-"48
-[v _team2count `i ~T0 @X0 1 a ]
-[; ;ctf.c: 48: int team2count = 0;
-[e = _team2count -> 0 `i ]
+[v _counter `i ~T0 @X0 1 a ]
+[; ;ctf.c: 47: int counter = 0;
+[e = _counter -> 0 `i ]
 "49
-[v _t1counter `i ~T0 @X0 1 a ]
-[; ;ctf.c: 49: int t1counter = 0;
-[e = _t1counter -> 0 `i ]
+[v _team1 `i ~T0 @X0 1 a ]
+[; ;ctf.c: 49: int team1 = 0;
+[e = _team1 -> 0 `i ]
 "50
-[v _t2counter `i ~T0 @X0 1 a ]
-[; ;ctf.c: 50: int t2counter = 0;
-[e = _t2counter -> 0 `i ]
-"51
-[v _fivef `i ~T0 @X0 1 a ]
-[; ;ctf.c: 51: int fivef = 0;
-[e = _fivef -> 0 `i ]
+[v _team2 `i ~T0 @X0 1 a ]
+[; ;ctf.c: 50: int team2 = 0;
+[e = _team2 -> 0 `i ]
 "52
-[v _fivemin `i ~T0 @X0 1 a ]
-[; ;ctf.c: 52: int fivemin = 0;
-[e = _fivemin -> 0 `i ]
-[; ;ctf.c: 54: PORTBbits.RB0 = 0;
+[v _team1count `i ~T0 @X0 1 a ]
+[; ;ctf.c: 52: int team1count = 0;
+[e = _team1count -> 0 `i ]
+"53
+[v _team2count `i ~T0 @X0 1 a ]
+[; ;ctf.c: 53: int team2count = 0;
+[e = _team2count -> 0 `i ]
 "54
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-[; ;ctf.c: 55: PORTBbits.RB1 = 0;
+[v _t1counter `i ~T0 @X0 1 a ]
+[; ;ctf.c: 54: int t1counter = 0;
+[e = _t1counter -> 0 `i ]
 "55
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;ctf.c: 57: startUp();
+[v _t2counter `i ~T0 @X0 1 a ]
+[; ;ctf.c: 55: int t2counter = 0;
+[e = _t2counter -> 0 `i ]
+"56
+[v _fivemin `i ~T0 @X0 1 a ]
+[; ;ctf.c: 56: int fivemin = 0;
+[e = _fivemin -> 0 `i ]
 "57
+[v _mintrack `i ~T0 @X0 1 a ]
+[; ;ctf.c: 57: int mintrack = 0;
+[e = _mintrack -> 0 `i ]
+[; ;ctf.c: 59: PORTBbits.RB2 = 0;
+"59
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;ctf.c: 60: PORTBbits.RB3 = 0;
+"60
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;ctf.c: 62: startUp();
+"62
 [e ( _startUp ..  ]
-[; ;ctf.c: 58: for(;;){
-"58
+[; ;ctf.c: 64: PORTBbits.RB4 = 1;
+"64
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[; ;ctf.c: 65: for(;;){
+"65
 {
 [e :U 90 ]
 {
-[; ;ctf.c: 59: if(tflag){
-"59
+[; ;ctf.c: 68: if(tflag){
+"68
 [e $ ! != _tflag -> 0 `i 93  ]
 {
-[; ;ctf.c: 60: tflag = 0;
-"60
+[; ;ctf.c: 69: tflag = 0;
+"69
 [e = _tflag -> 0 `i ]
-[; ;ctf.c: 62: if(team1count){
-"62
+[; ;ctf.c: 71: if(team1count)
+"71
 [e $ ! != _team1count -> 0 `i 94  ]
-{
-[; ;ctf.c: 63: t1counter++;
-"63
+[; ;ctf.c: 72: t1counter++;
+"72
 [e ++ _t1counter -> 1 `i ]
-"64
-}
 [e :U 94 ]
-[; ;ctf.c: 64: }
-[; ;ctf.c: 65: if(team2count){
-"65
+[; ;ctf.c: 74: if(team2count){
+"74
 [e $ ! != _team2count -> 0 `i 95  ]
 {
-[; ;ctf.c: 66: t2counter++;
-"66
+[; ;ctf.c: 75: t2counter++;
+"75
 [e ++ _t2counter -> 1 `i ]
-"67
+"76
 }
 [e :U 95 ]
-[; ;ctf.c: 67: }
-[; ;ctf.c: 68: if(fivef){
-"68
-[e $ ! != _fivef -> 0 `i 96  ]
-{
-[; ;ctf.c: 69: fivemin++;
-"69
+[; ;ctf.c: 76: }
+[; ;ctf.c: 78: if(team1 || team2)
+"78
+[e $ ! || != _team1 -> 0 `i != _team2 -> 0 `i 96  ]
+[; ;ctf.c: 79: fivemin++;
+"79
 [e ++ _fivemin -> 1 `i ]
-"70
-}
 [e :U 96 ]
-"71
+"80
 }
 [e :U 93 ]
-[; ;ctf.c: 70: }
-[; ;ctf.c: 71: }
-[; ;ctf.c: 72: if(t1counter >= 2451)
-"72
-[e $ ! >= _t1counter -> 2451 `i 97  ]
-[; ;ctf.c: 73: {
-"73
-{
-[; ;ctf.c: 74: t1counter = 0;
-"74
-[e = _t1counter -> 0 `i ]
-[; ;ctf.c: 75: PORTBbits.RB0 = 1;
-"75
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-[; ;ctf.c: 76: PORTBbits.RB1 = 0;
-"76
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;ctf.c: 77: team1 = 1;
-"77
-[e = _team1 -> 1 `i ]
-[; ;ctf.c: 78: team2 = 0;
-"78
-[e = _team2 -> 0 `i ]
-[; ;ctf.c: 79: fivef = 1;
-"79
-[e = _fivef -> 1 `i ]
-[; ;ctf.c: 80: fivemin = 0;
-"80
-[e = _fivemin -> 0 `i ]
-"81
-}
-[e :U 97 ]
-[; ;ctf.c: 81: }
-[; ;ctf.c: 82: if(t2counter >= 2451)
+[; ;ctf.c: 80: }
+[; ;ctf.c: 82: if(t1counter >= 1225)
 "82
-[e $ ! >= _t2counter -> 2451 `i 98  ]
+[e $ ! >= _t1counter -> 1225 `i 97  ]
 [; ;ctf.c: 83: {
 "83
 {
-[; ;ctf.c: 84: t2counter = 0;
+[; ;ctf.c: 84: t1counter = 0;
 "84
-[e = _t2counter -> 0 `i ]
-[; ;ctf.c: 85: PORTBbits.RB0 = 0;
+[e = _t1counter -> 0 `i ]
+[; ;ctf.c: 85: t2counter = 0;
 "85
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-[; ;ctf.c: 86: PORTBbits.RB1 = 1;
+[e = _t2counter -> 0 `i ]
+[; ;ctf.c: 86: PORTBbits.RB2 = 1;
 "86
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-[; ;ctf.c: 87: team1 = 0;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[; ;ctf.c: 87: PORTBbits.RB3 = 0;
 "87
-[e = _team1 -> 0 `i ]
-[; ;ctf.c: 88: team2 = 1;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;ctf.c: 88: PORTBbits.RB4 = 0;
 "88
-[e = _team2 -> 1 `i ]
-[; ;ctf.c: 89: fivef = 1;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[; ;ctf.c: 89: team1 = 1;
 "89
-[e = _fivef -> 1 `i ]
-[; ;ctf.c: 90: fivemin = 0;
+[e = _team1 -> 1 `i ]
+[; ;ctf.c: 90: team2 = 0;
 "90
-[e = _fivemin -> 0 `i ]
+[e = _team2 -> 0 `i ]
+[; ;ctf.c: 91: fivemin = 0;
 "91
+[e = _fivemin -> 0 `i ]
+[; ;ctf.c: 92: mintrack = 0;
+"92
+[e = _mintrack -> 0 `i ]
+"93
+}
+[e :U 97 ]
+[; ;ctf.c: 93: }
+[; ;ctf.c: 95: if(t2counter >= 1225)
+"95
+[e $ ! >= _t2counter -> 1225 `i 98  ]
+[; ;ctf.c: 96: {
+"96
+{
+[; ;ctf.c: 97: t1counter = 0;
+"97
+[e = _t1counter -> 0 `i ]
+[; ;ctf.c: 98: t2counter = 0;
+"98
+[e = _t2counter -> 0 `i ]
+[; ;ctf.c: 99: PORTBbits.RB2 = 0;
+"99
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;ctf.c: 100: PORTBbits.RB3 = 1;
+"100
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[; ;ctf.c: 101: PORTBbits.RB4 = 0;
+"101
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[; ;ctf.c: 102: team1 = 0;
+"102
+[e = _team1 -> 0 `i ]
+[; ;ctf.c: 103: team2 = 1;
+"103
+[e = _team2 -> 1 `i ]
+[; ;ctf.c: 104: fivemin = 0;
+"104
+[e = _fivemin -> 0 `i ]
+[; ;ctf.c: 105: mintrack = 0;
+"105
+[e = _mintrack -> 0 `i ]
+"106
 }
 [e :U 98 ]
-[; ;ctf.c: 91: }
-[; ;ctf.c: 92: if(fivemin >= 4902){
-"92
-[e $ ! >= _fivemin -> 4902 `i 99  ]
-{
-[; ;ctf.c: 93: PORTBbits.RB5 = 1;
-"93
-[e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-"94
-}
-[e :U 99 ]
-[; ;ctf.c: 94: }
-[; ;ctf.c: 96: if(PORTBbits.RB2){
-"96
-[e $ ! != -> . . _PORTBbits 0 2 `i -> -> -> 0 `i `Vuc `i 100  ]
-{
-[; ;ctf.c: 97: team1count = 1;
-"97
-[e = _team1count -> 1 `i ]
-"99
-}
-[; ;ctf.c: 99: }
-[e $U 101  ]
-"100
-[e :U 100 ]
-[; ;ctf.c: 100: else{
-{
-[; ;ctf.c: 101: team1count = 0;
-"101
-[e = _team1count -> 0 `i ]
-[; ;ctf.c: 102: t1counter = 0;
-"102
-[e = _t1counter -> 0 `i ]
-"103
-}
-[e :U 101 ]
-[; ;ctf.c: 103: }
-[; ;ctf.c: 105: if(PORTBbits.RB3){
-"105
-[e $ ! != -> . . _PORTBbits 0 3 `i -> -> -> 0 `i `Vuc `i 102  ]
-{
-[; ;ctf.c: 106: team2count = 1;
-"106
-[e = _team2count -> 1 `i ]
-"107
-}
-[; ;ctf.c: 107: }
-[e $U 103  ]
+[; ;ctf.c: 106: }
+[; ;ctf.c: 108: if(fivemin >= 14706){
 "108
-[e :U 102 ]
-[; ;ctf.c: 108: else{
+[e $ ! >= _fivemin -> 14706 `i 99  ]
 {
-[; ;ctf.c: 109: team2count = 0;
+[; ;ctf.c: 109: fivemin = 0;
 "109
-[e = _team2count -> 0 `i ]
-[; ;ctf.c: 110: t2counter = 0;
+[e = _fivemin -> 0 `i ]
+[; ;ctf.c: 110: mintrack++;
 "110
-[e = _t2counter -> 0 `i ]
+[e ++ _mintrack -> 1 `i ]
 "111
 }
-[e :U 103 ]
-"113
-}
+[e :U 99 ]
 [; ;ctf.c: 111: }
-[; ;ctf.c: 113: }
+[; ;ctf.c: 112: if(mintrack >= 10){
+"112
+[e $ ! >= _mintrack -> 10 `i 100  ]
+{
+[; ;ctf.c: 113: if(team1)
+"113
+[e $ ! != _team1 -> 0 `i 101  ]
+[; ;ctf.c: 114: PORTBbits.RB4 = 1;
+"114
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[e :U 101 ]
+[; ;ctf.c: 115: if(team2)
+"115
+[e $ ! != _team2 -> 0 `i 102  ]
+[; ;ctf.c: 116: PORTBbits.RB4 = 1;
+"116
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[e :U 102 ]
+"117
+}
+[e :U 100 ]
+[; ;ctf.c: 117: }
+[; ;ctf.c: 119: if(PORTBbits.RB0){
+"119
+[e $ ! != -> . . _PORTBbits 0 0 `i -> -> -> 0 `i `Vuc `i 103  ]
+{
+[; ;ctf.c: 120: team1count = 1;
+"120
+[e = _team1count -> 1 `i ]
+"121
+}
+[; ;ctf.c: 121: }
+[e $U 104  ]
+"122
+[e :U 103 ]
+[; ;ctf.c: 122: else{
+{
+[; ;ctf.c: 123: team1count = 0;
+"123
+[e = _team1count -> 0 `i ]
+[; ;ctf.c: 124: t1counter = 0;
+"124
+[e = _t1counter -> 0 `i ]
+"125
+}
+[e :U 104 ]
+[; ;ctf.c: 125: }
+[; ;ctf.c: 127: if(PORTBbits.RB1){
+"127
+[e $ ! != -> . . _PORTBbits 0 1 `i -> -> -> 0 `i `Vuc `i 105  ]
+{
+[; ;ctf.c: 128: team2count = 1;
+"128
+[e = _team2count -> 1 `i ]
+"129
+}
+[; ;ctf.c: 129: }
+[e $U 106  ]
+"130
+[e :U 105 ]
+[; ;ctf.c: 130: else{
+{
+[; ;ctf.c: 131: team2count = 0;
+"131
+[e = _team2count -> 0 `i ]
+[; ;ctf.c: 132: t2counter = 0;
+"132
+[e = _t2counter -> 0 `i ]
+"133
+}
+[e :U 106 ]
+"135
+}
+[; ;ctf.c: 133: }
+[; ;ctf.c: 135: }
 [e $U 90  ]
 [e :U 91 ]
 }
-[; ;ctf.c: 114: }
-"114
+[; ;ctf.c: 136: }
+"136
 [e :UE 89 ]
 }
-"116
+"138
 [v _startUp `(v ~T0 @X0 1 ef ]
 {
-[; ;ctf.c: 116: void startUp(){
+[; ;ctf.c: 138: void startUp(){
 [e :U _startUp ]
 [f ]
-[; ;ctf.c: 117: OSCCON = 0x70;
-"117
+[; ;ctf.c: 139: OSCCON = 0x70;
+"139
 [e = _OSCCON -> -> 112 `i `uc ]
-[; ;ctf.c: 119: TRISB = 0b1011100;
-"119
-[e = _TRISB -> -> 92 `i `uc ]
-[; ;ctf.c: 120: PORTB = 0;
-"120
+[; ;ctf.c: 141: TRISB = 0b00000011;
+"141
+[e = _TRISB -> -> 3 `i `uc ]
+[; ;ctf.c: 142: PORTB = 0;
+"142
 [e = _PORTB -> -> 0 `i `uc ]
-[; ;ctf.c: 122: initializeInt();
-"122
+[; ;ctf.c: 144: initializeInt();
+"144
 [e ( _initializeInt ..  ]
-[; ;ctf.c: 123: initializeTimer0();
-"123
+[; ;ctf.c: 145: initializeTimer0();
+"145
 [e ( _initializeTimer0 ..  ]
-[; ;ctf.c: 124: initializeTimer1();
-"124
+[; ;ctf.c: 146: initializeTimer1();
+"146
 [e ( _initializeTimer1 ..  ]
-[; ;ctf.c: 125: }
-"125
-[e :UE 104 ]
+[; ;ctf.c: 147: }
+"147
+[e :UE 107 ]
 }
-"131
+"153
 [v F1049 `(v ~T0 @X0 1 tf ]
 [v _isr `IF1049 ~T0 @X0 1 e ]
 {
-[; ;ctf.c: 131: void interrupt isr(void){
+[; ;ctf.c: 153: void interrupt isr(void){
 [e :U _isr ]
 [f ]
-[; ;ctf.c: 134: if(TMR1IF){
-"134
-[e $ ! _TMR1IF 106  ]
-{
-[; ;ctf.c: 135: TMR1IF = 0;
-"135
-[e = _TMR1IF -> -> 0 `i `b ]
-"138
-}
-[e :U 106 ]
-[; ;ctf.c: 138: }
-[; ;ctf.c: 140: if(TMR0IF){
-"140
-[e $ ! _TMR0IF 107  ]
-{
-[; ;ctf.c: 141: TMR0IF = 0;
-"141
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;ctf.c: 142: TMR0 = 0;
-"142
-[e = _TMR0 -> -> 0 `i `uc ]
-[; ;ctf.c: 143: tflag = 1;
-"143
-[e = _tflag -> 1 `i ]
-"144
-}
-[e :U 107 ]
-[; ;ctf.c: 144: }
-[; ;ctf.c: 145: }
-"145
-[e :UE 105 ]
-}
-"147
-[v _initializeInt `(v ~T0 @X0 1 ef ]
-{
-[; ;ctf.c: 147: void initializeInt(){
-[e :U _initializeInt ]
-[f ]
-[; ;ctf.c: 148: TMR1IE = 1;
-"148
-[e = _TMR1IE -> -> 1 `i `b ]
-[; ;ctf.c: 149: TMR0IE = 1;
-"149
-[e = _TMR0IE -> -> 1 `i `b ]
-[; ;ctf.c: 150: (GIE = 1);
-"150
-[e = _GIE -> -> 1 `i `b ]
-[; ;ctf.c: 151: INTCONbits.PEIE = 1;
-"151
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;ctf.c: 152: PIR1bits.RCIF = 0;
-"152
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;ctf.c: 153: PIE1bits.RCIE = 0;
-"153
-[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
-[; ;ctf.c: 154: }
-"154
-[e :UE 108 ]
-}
+[; ;ctf.c: 156: if(TMR1IF){
 "156
-[v _initializeTimer1 `(v ~T0 @X0 1 ef ]
+[e $ ! _TMR1IF 109  ]
 {
-[; ;ctf.c: 156: void initializeTimer1(){
-[e :U _initializeTimer1 ]
-[f ]
-[; ;ctf.c: 157: T1CONbits.T1CKPS = 0b00;
+[; ;ctf.c: 157: TMR1IF = 0;
 "157
-[e = . . _T1CONbits 0 4 -> -> 0 `i `uc ]
-[; ;ctf.c: 158: T1CONbits.T1OSCEN = 1;
-"158
-[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
-[; ;ctf.c: 159: T1CONbits.TMR1CS = 0;
-"159
-[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
-[; ;ctf.c: 160: T1CONbits.TMR1ON = 1;
+[e = _TMR1IF -> -> 0 `i `b ]
 "160
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-[; ;ctf.c: 161: }
-"161
-[e :UE 109 ]
 }
-"163
-[v _initializeTimer0 `(v ~T0 @X0 1 ef ]
+[e :U 109 ]
+[; ;ctf.c: 160: }
+[; ;ctf.c: 162: if(TMR0IF){
+"162
+[e $ ! _TMR0IF 110  ]
 {
-[; ;ctf.c: 163: void initializeTimer0(){
-[e :U _initializeTimer0 ]
-[f ]
-[; ;ctf.c: 164: OPTION_REGbits.T0CS = 0;
+[; ;ctf.c: 163: TMR0IF = 0;
+"163
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;ctf.c: 164: TMR0 = 0;
 "164
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-[; ;ctf.c: 165: OPTION_REGbits.PSA = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;ctf.c: 165: tflag = 1;
 "165
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-[; ;ctf.c: 166: OPTION_REGbits.PS = 0b100;
+[e = _tflag -> 1 `i ]
 "166
-[e = . . _OPTION_REGbits 0 0 -> -> 4 `i `uc ]
+}
+[e :U 110 ]
+[; ;ctf.c: 166: }
 [; ;ctf.c: 167: }
 "167
-[e :UE 110 ]
+[e :UE 108 ]
+}
+"170
+[v _initializeInt `(v ~T0 @X0 1 ef ]
+{
+[; ;ctf.c: 170: void initializeInt(){
+[e :U _initializeInt ]
+[f ]
+[; ;ctf.c: 171: TMR1IE = 1;
+"171
+[e = _TMR1IE -> -> 1 `i `b ]
+[; ;ctf.c: 172: TMR0IE = 1;
+"172
+[e = _TMR0IE -> -> 1 `i `b ]
+[; ;ctf.c: 173: (GIE = 1);
+"173
+[e = _GIE -> -> 1 `i `b ]
+[; ;ctf.c: 174: INTCONbits.PEIE = 1;
+"174
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;ctf.c: 175: PIR1bits.RCIF = 0;
+"175
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;ctf.c: 176: PIE1bits.RCIE = 0;
+"176
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+[; ;ctf.c: 177: }
+"177
+[e :UE 111 ]
+}
+"179
+[v _initializeTimer1 `(v ~T0 @X0 1 ef ]
+{
+[; ;ctf.c: 179: void initializeTimer1(){
+[e :U _initializeTimer1 ]
+[f ]
+[; ;ctf.c: 180: T1CONbits.T1CKPS = 0b00;
+"180
+[e = . . _T1CONbits 0 4 -> -> 0 `i `uc ]
+[; ;ctf.c: 181: T1CONbits.T1OSCEN = 1;
+"181
+[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
+[; ;ctf.c: 182: T1CONbits.TMR1CS = 0;
+"182
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;ctf.c: 183: T1CONbits.TMR1ON = 1;
+"183
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;ctf.c: 184: }
+"184
+[e :UE 112 ]
+}
+"187
+[v _initializeTimer0 `(v ~T0 @X0 1 ef ]
+{
+[; ;ctf.c: 187: void initializeTimer0(){
+[e :U _initializeTimer0 ]
+[f ]
+[; ;ctf.c: 188: OPTION_REGbits.T0CS = 0;
+"188
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+[; ;ctf.c: 189: OPTION_REGbits.PSA = 0;
+"189
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+[; ;ctf.c: 190: OPTION_REGbits.PS = 0b100;
+"190
+[e = . . _OPTION_REGbits 0 0 -> -> 4 `i `uc ]
+[; ;ctf.c: 191: }
+"191
+[e :UE 113 ]
 }

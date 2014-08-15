@@ -9,12 +9,10 @@
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
-    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ctf.c</itemPath>
+      <itemPath>chrono.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

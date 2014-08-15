@@ -9,12 +9,10 @@
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
-    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ctf.c</itemPath>
+      <itemPath>chrono.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -30,7 +28,7 @@
         <targetDevice>PIC16F88</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD3PlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.20</languageToolchainVersion>
         <platform>3</platform>
@@ -58,8 +56,8 @@
       </HI-TECH-COMP>
       <HI-TECH-LINK>
       </HI-TECH-LINK>
-      <ICD3PlatformTool>
-      </ICD3PlatformTool>
+      <Simulator>
+      </Simulator>
       <XC8-config-global>
       </XC8-config-global>
     </conf>

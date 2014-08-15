@@ -331,11 +331,6 @@ void fLCD_ClearLine(char Line){
         fLCD_RawSend(' ', 0x10);
     fLCD_Cursor(0,Line);
 }
-
-void initializeLCD(){
-    
-}
-
 void startUp(){
     OSCCON = 0x70;//Set oscillator for 8MHz
 

@@ -56,10 +56,14 @@
       </HI-TECH-COMP>
       <HI-TECH-LINK>
       </HI-TECH-LINK>
+      <MPASMWIN-LD>
+      </MPASMWIN-LD>
       <Simulator>
       </Simulator>
       <XC8-config-global>
       </XC8-config-global>
+      <mpasmsuite>
+      </mpasmsuite>
     </conf>
   </confs>
 </configurationDescriptor>

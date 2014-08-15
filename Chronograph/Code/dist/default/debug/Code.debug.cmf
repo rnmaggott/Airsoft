@@ -11,11 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
+$C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
 end_init CODE 0 11 11 2 2
 reset_vec CODE 0 0 0 2 2
 config CONFIG 0 2007 2007 2 2
-$dist/default/production\Code.production.obj
+$dist/default/debug\Code.debug.obj
 intentry CODE 0 4 4 D 2
 text11 CODE 0 31D 31D F 2
 text10 CODE 0 32C 32C D 2
@@ -78,7 +78,7 @@ STRING 034F-0FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\Code.production.obj
+$dist/default/debug\Code.debug.obj
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":356 4 intentry CODE
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":225 13 text2 CODE
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":226 17 text2 CODE
@@ -254,10 +254,10 @@ $dist/default/production\Code.production.obj
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":381 347 text8 CODE
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":382 348 text8 CODE
 "C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c":383 349 text8 CODE
-"C:\Users\Ryan\AppData\Local\Temp\s3vs.":289 34A cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s3vs.":290 34B cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s3vs.":297 34C cinit CODE
-"C:\Users\Ryan\AppData\Local\Temp\s3vs.":298 34D cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s1s4.":289 34A cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s1s4.":290 34B cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s1s4.":297 34C cinit CODE
+"C:\Users\Ryan\AppData\Local\Temp\s1s4.":298 34D cinit CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -270,65 +270,65 @@ $dist/default/production\Code.production.obj
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-fLCD_PrintString@String 23 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-___awdiv@counter 21 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__end_of_startUp 616 0 CODE 0 text7 dist/default/production\Code.production.obj
-__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
+fLCD_PrintString@String 23 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+___awdiv@counter 21 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+__end_of_startUp 616 0 CODE 0 text7 dist/default/debug\Code.debug.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
 __S0 2009 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_GIE 5F 0 ABS 0 - dist/default/production\Code.production.obj
+_GIE 5F 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Hintentry 22 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
-__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\Code.production.obj
-__pintentry 8 0 CODE 0 intentry dist/default/production\Code.production.obj
-?_fLCD_RawSend 74 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-__end_of___awdiv 4AC 0 CODE 0 text3 dist/default/production\Code.production.obj
-_isr 63A 0 CODE 0 text11 dist/default/production\Code.production.obj
-__size_of_fLCD_PrintString 0 0 ABS 0 - dist/default/production\Code.production.obj
-_main 4AC 0 CODE 0 maintext dist/default/production\Code.production.obj
-btemp 7E 0 ABS 0 - dist/default/production\Code.production.obj
-start 22 0 CODE 0 init C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-?_fLCD_PrintString 77 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-fLCD_PrintNumber@tmp_int 28 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__size_of_fLCD_PrintNumber 0 0 ABS 0 - dist/default/production\Code.production.obj
-_TRISA 85 0 ABS 0 - dist/default/production\Code.production.obj
-_TRISB 86 0 ABS 0 - dist/default/production\Code.production.obj
-_PORTA 5 0 ABS 0 - dist/default/production\Code.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-_PORTB 6 0 ABS 0 - dist/default/production\Code.production.obj
-_ANSEL 9B 0 ABS 0 - dist/default/production\Code.production.obj
-_CMCON 9C 0 ABS 0 - dist/default/production\Code.production.obj
-wtemp0 7E 0 ABS 0 - dist/default/production\Code.production.obj
-interrupt_function 8 0 CODE 0 intentry dist/default/production\Code.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__pintentry 8 0 CODE 0 intentry dist/default/debug\Code.debug.obj
+?_fLCD_RawSend 74 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+__end_of___awdiv 4AC 0 CODE 0 text3 dist/default/debug\Code.debug.obj
+_isr 63A 0 CODE 0 text11 dist/default/debug\Code.debug.obj
+__size_of_fLCD_PrintString 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+_main 4AC 0 CODE 0 maintext dist/default/debug\Code.debug.obj
+btemp 7E 0 ABS 0 - dist/default/debug\Code.debug.obj
+start 22 0 CODE 0 init C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+?_fLCD_PrintString 77 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+fLCD_PrintNumber@tmp_int 28 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+__size_of_fLCD_PrintNumber 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TRISA 85 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TRISB 86 0 ABS 0 - dist/default/debug\Code.debug.obj
+_PORTA 5 0 ABS 0 - dist/default/debug\Code.debug.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+_PORTB 6 0 ABS 0 - dist/default/debug\Code.debug.obj
+_ANSEL 9B 0 ABS 0 - dist/default/debug\Code.debug.obj
+_CMCON 9C 0 ABS 0 - dist/default/debug\Code.debug.obj
+wtemp0 7E 0 ABS 0 - dist/default/debug\Code.debug.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/debug\Code.debug.obj
 __Hconfig 4012 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
-__end_of__stringtab 622 0 STRING 0 strings dist/default/production\Code.production.obj
-_fLCD_PrintNumber 26 0 CODE 0 text2 dist/default/production\Code.production.obj
-_tflag 78 0 COMMON 1 bssCOMMON dist/default/production\Code.production.obj
+__end_of__stringtab 622 0 STRING 0 strings dist/default/debug\Code.debug.obj
+_fLCD_PrintNumber 26 0 CODE 0 text2 dist/default/debug\Code.debug.obj
+_tflag 78 0 COMMON 1 bssCOMMON dist/default/debug\Code.debug.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of__stringdata 63A 0 STRING 0 strings dist/default/production\Code.production.obj
-__size_of_isr 0 0 ABS 0 - dist/default/production\Code.production.obj
-fLCD_RawSend@in 20 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-_initializeInt 658 0 CODE 0 text10 dist/default/production\Code.production.obj
+__end_of__stringdata 63A 0 STRING 0 strings dist/default/debug\Code.debug.obj
+__size_of_isr 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+fLCD_RawSend@in 20 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+_initializeInt 658 0 CODE 0 text10 dist/default/debug\Code.debug.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
-_OPTION_REG 81 0 ABS 0 - dist/default/production\Code.production.obj
-_initializeTimer0 672 0 CODE 0 text9 dist/default/production\Code.production.obj
-_initializeTimer1 684 0 CODE 0 text8 dist/default/production\Code.production.obj
+_OPTION_REG 81 0 ABS 0 - dist/default/debug\Code.debug.obj
+_initializeTimer0 672 0 CODE 0 text9 dist/default/debug\Code.debug.obj
+_initializeTimer1 684 0 CODE 0 text8 dist/default/debug\Code.debug.obj
 __Hcommon 0 0 ABS 0 common -
 __Lcommon 0 0 ABS 0 common -
-_PIE1bits 8C 0 ABS 0 - dist/default/production\Code.production.obj
+_PIE1bits 8C 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_PIR1bits C 0 ABS 0 - dist/default/production\Code.production.obj
-_TMR0IE 5D 0 ABS 0 - dist/default/production\Code.production.obj
-_TMR1IE 460 0 ABS 0 - dist/default/production\Code.production.obj
-_TMR0IF 5A 0 ABS 0 - dist/default/production\Code.production.obj
-_TMR1IF 60 0 ABS 0 - dist/default/production\Code.production.obj
-?___awdiv 74 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-_OSCCON 8F 0 ABS 0 - dist/default/production\Code.production.obj
+_PIR1bits C 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TMR0IE 5D 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TMR1IE 460 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TMR0IF 5A 0 ABS 0 - dist/default/debug\Code.debug.obj
+_TMR1IF 60 0 ABS 0 - dist/default/debug\Code.debug.obj
+?___awdiv 74 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+_OSCCON 8F 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Labs1 0 0 ABS 0 abs1 -
 __Hsfr0 0 0 ABS 0 sfr0 -
@@ -339,32 +339,32 @@ __Hsfr2 0 0 ABS 0 sfr2 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Hsfr3 0 0 ABS 0 sfr3 -
 __Lsfr3 0 0 ABS 0 sfr3 -
-__end_of_fLCD_Clear 5E6 0 CODE 0 text5 dist/default/production\Code.production.obj
-__end_of_fLCD_Start 332 0 CODE 0 text4 dist/default/production\Code.production.obj
-__size_of_initializeInt 0 0 ABS 0 - dist/default/production\Code.production.obj
-fLCD_PrintString@MSZ_String 77 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
+__end_of_fLCD_Clear 5E6 0 CODE 0 text5 dist/default/debug\Code.debug.obj
+__end_of_fLCD_Start 332 0 CODE 0 text4 dist/default/debug\Code.debug.obj
+__size_of_initializeInt 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+fLCD_PrintString@MSZ_String 77 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__size_of_fLCD_RawSend 0 0 ABS 0 - dist/default/production\Code.production.obj
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-?_fLCD_PrintNumber 25 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-saved_w 7E 0 ABS 0 - dist/default/production\Code.production.obj
+__size_of_fLCD_RawSend 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+?_fLCD_PrintNumber 25 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+saved_w 7E 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Hinit 22 0 CODE 0 init -
 __Linit 22 0 CODE 0 init -
-__end_of_main 558 0 CODE 0 maintext dist/default/production\Code.production.obj
+__end_of_main 558 0 CODE 0 maintext dist/default/debug\Code.debug.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
-end_of_initialization 698 0 CODE 0 cinit dist/default/production\Code.production.obj
-___awdiv@sign 22 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__stringtab 616 0 STRING 0 strings dist/default/production\Code.production.obj
-_PORTAbits 5 0 ABS 0 - dist/default/production\Code.production.obj
-_PORTBbits 6 0 ABS 0 - dist/default/production\Code.production.obj
-_T1CONbits 10 0 ABS 0 - dist/default/production\Code.production.obj
+end_of_initialization 698 0 CODE 0 cinit dist/default/debug\Code.debug.obj
+___awdiv@sign 22 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+__stringtab 616 0 STRING 0 strings dist/default/debug\Code.debug.obj
+_PORTAbits 5 0 ABS 0 - dist/default/debug\Code.debug.obj
+_PORTBbits 6 0 ABS 0 - dist/default/debug\Code.debug.obj
+_T1CONbits 10 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
-__pstrings 616 0 STRING 0 strings dist/default/production\Code.production.obj
+__pstrings 616 0 STRING 0 strings dist/default/debug\Code.debug.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Lbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -373,90 +373,90 @@ __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
-___latbits 1 0 ABS 0 - C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
+___latbits 1 0 ABS 0 - C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
-fLCD_RawSend@pt 21 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__ptext1 558 0 CODE 0 text1 dist/default/production\Code.production.obj
-__ptext2 26 0 CODE 0 text2 dist/default/production\Code.production.obj
-__ptext3 3F2 0 CODE 0 text3 dist/default/production\Code.production.obj
-__ptext4 252 0 CODE 0 text4 dist/default/production\Code.production.obj
-__ptext5 5A4 0 CODE 0 text5 dist/default/production\Code.production.obj
-__ptext6 332 0 CODE 0 text6 dist/default/production\Code.production.obj
-__ptext7 5E6 0 CODE 0 text7 dist/default/production\Code.production.obj
-__ptext8 684 0 CODE 0 text8 dist/default/production\Code.production.obj
-__ptext9 672 0 CODE 0 text9 dist/default/production\Code.production.obj
+fLCD_RawSend@pt 21 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+__ptext1 558 0 CODE 0 text1 dist/default/debug\Code.debug.obj
+__ptext2 26 0 CODE 0 text2 dist/default/debug\Code.debug.obj
+__ptext3 3F2 0 CODE 0 text3 dist/default/debug\Code.debug.obj
+__ptext4 252 0 CODE 0 text4 dist/default/debug\Code.debug.obj
+__ptext5 5A4 0 CODE 0 text5 dist/default/debug\Code.debug.obj
+__ptext6 332 0 CODE 0 text6 dist/default/debug\Code.debug.obj
+__ptext7 5E6 0 CODE 0 text7 dist/default/debug\Code.debug.obj
+__ptext8 684 0 CODE 0 text8 dist/default/debug\Code.debug.obj
+__ptext9 672 0 CODE 0 text9 dist/default/debug\Code.debug.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
-__end_of__initialization 698 0 CODE 0 cinit dist/default/production\Code.production.obj
-fLCD_RawSend@mask 74 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-_fLCD_RawSend 332 0 CODE 0 text6 dist/default/production\Code.production.obj
-_fLCD_Clear 5A4 0 CODE 0 text5 dist/default/production\Code.production.obj
+__end_of__initialization 698 0 CODE 0 cinit dist/default/debug\Code.debug.obj
+fLCD_RawSend@mask 74 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+_fLCD_RawSend 332 0 CODE 0 text6 dist/default/debug\Code.debug.obj
+_fLCD_Clear 5A4 0 CODE 0 text5 dist/default/debug\Code.debug.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
-_startUp 5E6 0 CODE 0 text7 dist/default/production\Code.production.obj
-__end_of_isr 658 0 CODE 0 text11 dist/default/production\Code.production.obj
-__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\Code.production.obj
+_startUp 5E6 0 CODE 0 text7 dist/default/debug\Code.debug.obj
+__end_of_isr 658 0 CODE 0 text11 dist/default/debug\Code.debug.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Hcinit 0 0 ABS 0 cinit -
 __Lcinit 0 0 ABS 0 cinit -
-___awdiv 3F2 0 CODE 0 text3 dist/default/production\Code.production.obj
-__size_of_main 0 0 ABS 0 - dist/default/production\Code.production.obj
-__end_of_initializeTimer0 684 0 CODE 0 text9 dist/default/production\Code.production.obj
-__end_of_initializeTimer1 694 0 CODE 0 text8 dist/default/production\Code.production.obj
-__size_of_initializeTimer0 0 0 ABS 0 - dist/default/production\Code.production.obj
-fLCD_PrintNumber@tmp_byte 2A 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-__size_of_initializeTimer1 0 0 ABS 0 - dist/default/production\Code.production.obj
-__ptext10 658 0 CODE 0 text10 dist/default/production\Code.production.obj
-__ptext11 63A 0 CODE 0 text11 dist/default/production\Code.production.obj
-__size_of___awdiv 0 0 ABS 0 - dist/default/production\Code.production.obj
-_fLCD_PrintString 558 0 CODE 0 text1 dist/default/production\Code.production.obj
-__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
+___awdiv 3F2 0 CODE 0 text3 dist/default/debug\Code.debug.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__end_of_initializeTimer0 684 0 CODE 0 text9 dist/default/debug\Code.debug.obj
+__end_of_initializeTimer1 694 0 CODE 0 text8 dist/default/debug\Code.debug.obj
+__size_of_initializeTimer0 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+fLCD_PrintNumber@tmp_byte 2A 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+__size_of_initializeTimer1 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__ptext10 658 0 CODE 0 text10 dist/default/debug\Code.debug.obj
+__ptext11 63A 0 CODE 0 text11 dist/default/debug\Code.debug.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+_fLCD_PrintString 558 0 CODE 0 text1 dist/default/debug\Code.debug.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\Code.production.obj
-fLCD_PrintString@idx 24 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
-_INTCONbits B 0 ABS 0 - dist/default/production\Code.production.obj
+__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/debug\Code.debug.obj
+fLCD_PrintString@idx 24 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
+_INTCONbits B 0 ABS 0 - dist/default/debug\Code.debug.obj
 __Hend_init 26 0 CODE 0 end_init -
 __Lend_init 22 0 CODE 0 end_init -
-___awdiv@divisor 74 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-_fLCD_Start 252 0 CODE 0 text4 dist/default/production\Code.production.obj
-fLCD_PrintNumber@Number 25 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+___awdiv@divisor 74 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+_fLCD_Start 252 0 CODE 0 text4 dist/default/debug\Code.debug.obj
+fLCD_PrintNumber@Number 25 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__stringdata 622 0 STRING 0 strings dist/default/production\Code.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
-__size_of_fLCD_Clear 0 0 ABS 0 - dist/default/production\Code.production.obj
-__end_of_fLCD_RawSend 3F2 0 CODE 0 text6 dist/default/production\Code.production.obj
-__size_of_fLCD_Start 0 0 ABS 0 - dist/default/production\Code.production.obj
+__stringdata 622 0 STRING 0 strings dist/default/debug\Code.debug.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
+__size_of_fLCD_Clear 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__end_of_fLCD_RawSend 3F2 0 CODE 0 text6 dist/default/debug\Code.debug.obj
+__size_of_fLCD_Start 0 0 ABS 0 - dist/default/debug\Code.debug.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
-__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-start_initialization 694 0 CODE 0 cinit dist/default/production\Code.production.obj
-___awdiv@quotient 23 0 BANK0 1 cstackBANK0 dist/default/production\Code.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+start_initialization 694 0 CODE 0 cinit dist/default/debug\Code.debug.obj
+___awdiv@quotient 23 0 BANK0 1 cstackBANK0 dist/default/debug\Code.debug.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_initializeInt 672 0 CODE 0 text10 dist/default/production\Code.production.obj
-__pmaintext 4AC 0 CODE 0 maintext dist/default/production\Code.production.obj
-__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Code.production.obj
-_OPTION_REGbits 81 0 ABS 0 - dist/default/production\Code.production.obj
-__size_of_startUp 0 0 ABS 0 - dist/default/production\Code.production.obj
-__CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production\Code.production.obj
-__initialization 694 0 CODE 0 cinit dist/default/production\Code.production.obj
-__end_of_fLCD_PrintString 5A4 0 CODE 0 text1 dist/default/production\Code.production.obj
-__stringbase 620 0 STRING 0 strings dist/default/production\Code.production.obj
-__end_of_fLCD_PrintNumber 252 0 CODE 0 text2 dist/default/production\Code.production.obj
-__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Code.production.obj
-__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Code.production.obj
-__CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production\Code.production.obj
-___awdiv@dividend 76 0 COMMON 1 cstackCOMMON dist/default/production\Code.production.obj
+__end_of_initializeInt 672 0 CODE 0 text10 dist/default/debug\Code.debug.obj
+__pmaintext 4AC 0 CODE 0 maintext dist/default/debug\Code.debug.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+_OPTION_REGbits 81 0 ABS 0 - dist/default/debug\Code.debug.obj
+__size_of_startUp 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__initialization 694 0 CODE 0 cinit dist/default/debug\Code.debug.obj
+__end_of_fLCD_PrintString 5A4 0 CODE 0 text1 dist/default/debug\Code.debug.obj
+__stringbase 620 0 STRING 0 strings dist/default/debug\Code.debug.obj
+__end_of_fLCD_PrintNumber 252 0 CODE 0 text2 dist/default/debug\Code.debug.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+__CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/debug\Code.debug.obj
+___awdiv@dividend 76 0 COMMON 1 cstackCOMMON dist/default/debug\Code.debug.obj
 # %DABS Section
 # This section contains a table of all usuage of the assember
 # directive DABS in the program. Each line has the following format:

@@ -194,10 +194,10 @@ cstackBANK0 20 2D BANK0 20 1
 strings 616 639 STRING 616 0
 text11 63A 69D CODE 63A 0
 %locals
-dist/default/production\Code.production.obj
+dist/default/debug\Code.debug.obj
 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
 2062 30B 0 STRING 0
-C:\Users\Ryan\AppData\Local\Temp\s3vs.
+C:\Users\Ryan\AppData\Local\Temp\s1s4.
 289 34A 0 CODE 0
 290 34B 0 CODE 0
 297 34C 0 CODE 0

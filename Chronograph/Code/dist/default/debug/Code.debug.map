@@ -3,22 +3,22 @@ Microchip MPLAB XC8 Compiler V1.20 ()
 Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.20\dat\en_msgs.txt -cs \
-  -h+dist/default/production\Code.production.sym \
-  --cmf=dist/default/production\Code.production.cmf -z -Q16F88 \
-  -oC:\Users\Ryan\AppData\Local\Temp\s3vs.6 \
-  -Mdist/default/production/Code.production.map -E1 -ver=XC8 \
-  -ACONST=00h-0FFhx16 -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
-  -AENTRY=00h-0FFhx16 -ASTRING=00h-0FFhx16 -ACOMMON=070h-07Fh \
-  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
-  -ABANK3=0190h-01EFh -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -h+dist/default/debug\Code.debug.sym \
+  --cmf=dist/default/debug\Code.debug.cmf -z -Q16F88 \
+  -oC:\Users\Ryan\AppData\Local\Temp\s1s4.6 \
+  -Mdist/default/debug/Code.debug.map -E1 -ver=XC8 -ACONST=00h-0FFhx16 \
+  -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh -AENTRY=00h-0FFhx16 \
+  -ASTRING=00h-0FFhx16 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
   -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
   -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pfunctab=CODE \
   -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h \
   -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA \
   -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Ryan\AppData\Local\Temp\s3vs.obj \
-  dist/default/production\Code.production.obj 
+  C:\Users\Ryan\AppData\Local\Temp\s1s4.obj \
+  dist/default/debug\Code.debug.obj 
 
 Object code version is 3.11
 
@@ -27,11 +27,11 @@ Machine type is 16F88
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Ryan\AppData\Local\Temp\s3vs.obj
+C:\Users\Ryan\AppData\Local\Temp\s1s4.obj
                 end_init                             11       11        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        2     400E       0
-dist/default/production\Code.production.obj
+dist/default/debug\Code.debug.obj
                 intentry                              4        4        D        8       0
                 text11                              31D      31D        F      63A       0
                 text10                              32C      32C        D      63A       0

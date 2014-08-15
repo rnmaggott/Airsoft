@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.20 build 52243 
-                                                                                               Fri Aug 15 21:16:20 2014
+                                                                                               Fri Aug 15 21:17:41 2014
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 52243
      1                           	processor	16F88
@@ -2071,7 +2071,7 @@ DATA                 0      0      1B      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.20 build 52243 
-Symbol Table                                                                                   Fri Aug 15 21:16:20 2014
+Symbol Table                                                                                   Fri Aug 15 21:17:41 2014
 
                          pc 0002                 __CFG_CP$OFF 0000                ___awdiv@sign 0022  
                         fsr 0004              ??_fLCD_RawSend 0075                         _GIE 005F  

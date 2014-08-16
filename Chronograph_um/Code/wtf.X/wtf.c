@@ -45,42 +45,57 @@ void fLCD_ClearLine(char Line);
 
 //Defines
 #define _XTAL_FREQ 8000000      // Internal Oscillator set to 8Mhz
-#define LCD_0 PORTBbits.RB4
+#define LCD_0 PORTAbits.RA0
 #define LCD_1 PORTBbits.RB1
 #define LCD_2 PORTBbits.RB2
 #define LCD_3 PORTBbits.RB3
-#define LCD_RS PORTAbits.RA1 //PORTBbits.RB4
-#define LCD_E PORTAbits.RA0 //PORTBbits.RB5
+#define LCD_RS PORTBbits.RB4
+#define LCD_E PORTBbits.RB5
 #define delay __delay_us(120)
 #define rowcnt 2
 #define colcnt 16
-#define dist 0.0205
 
 int tflag = 0;          //Flag set when interrupt is triggered (4ms)
-unsigned int time = 0;
-double tdist = 0;
-double speed = 0;
-double fin = 0;
-double a = 0;
-double b = 0;
 
 void main(void) {
-    
+
     startUp();
     __delay_ms(120);
     fLCD_Start();
-    
+
+    /*fLCD_PrintASCII('R');
+    fLCD_PrintASCII('y');
+    fLCD_PrintASCII('a');
+    fLCD_PrintASCII('n');
+    fLCD_PrintASCII('.');
+    fLCD_PrintASCII('L');
+    fLCD_PrintASCII('.');
+    fLCD_PrintASCII('M');
+    fLCD_PrintNumber(10);*/
+
     for(;;){
-        tdist = time/(2);
-        speed = 20.5/tdist;
-        fin = (speed*1000*3.280839895);
-        fLCD_PrintNumber((int)fin);
-        fLCD_RawSend('.', 0x10);
-        b = (fin-(int)fin)*1000;
-        fLCD_PrintNumber((int)b);
-        __delay_ms(100);
-        //tflag++;
+        fLCD_PrintNumber(380);
+        fLCD_PrintString("fps",3);
+        __delay_ms(1000);
         fLCD_Clear();
+        //fLCD_PrintNumber(250);
+        fLCD_PrintString("oh yes!",7);
+        __delay_ms(1000);
+        fLCD_Clear();
+
+        /*fLCD_Clear();
+        __delay_ms(1000);
+        fLCD_PrintString("Sweet, i",8);
+        fLCD_Cursor(0, 1);
+        fLCD_PrintString("t works!",8);
+        __delay_ms(1000);
+        fLCD_Clear();
+        __delay_ms(1000);
+        fLCD_PrintNumber(380);
+        fLCD_PrintString("fps",3);
+        */
+        //fLCD_PrintNumber(300);
+
     }
 }
 
@@ -242,7 +257,7 @@ void fLCD_PrintNumber(short Number){
             tmp_byte--;
         }
     }
-    
+
     if(Number >= 10){
         tmp_byte = tmp_int/10;
         fLCD_RawSend('0' + tmp_byte, 0x10);
@@ -324,7 +339,7 @@ void startUp(){
 
     OPTION_REG = 0xc0;
 
-    TRISB = 0b00100001;//Set input (pin 3,4,5,7,8) and output (pin 1,2,6)
+    TRISB = 0b00000000;//Set input (pin 3,4,5,7,8) and output (pin 1,2,6)
     TRISA = 0b00000000;
     PORTB = 0;//Set initial output to 0
     PORTA = 0;
@@ -340,49 +355,24 @@ void startUp(){
  */
 void interrupt isr(void){
 
-    if(RBIF){
-        RBIF = 0;
-        time = TMR1;
-        tflag = PORTBbits.RB5;
-        //TMR1 = 0;
-        //TMR1IE = 0;
-        //TMR1IE = 1;
-        //time++;
-        /*if(!tflag){
-            TMR1 = 0;
-            tflag = 1;
-        }
-        else{
-            time = TMR1;
-        }*/
-    }
-    if(INT0IF){
-        INT0IF = 0;
-        //TMR1IE = 1;
-        TMR1 = 0;
-    }
 	//Timer1 Interrupt
     if(TMR1IF){
         TMR1IF = 0;
-        //time++;
     }
     //timer0 interrupt
-    /*if(TMR0IF){
+    if(TMR0IF){
         TMR0IF = 0;
-        time++;
-    }*/
+    }
 }
 
 //Interrupts required for the timer and input detection.
 void initializeInt(){
     TMR1IE = 1;
-    TMR0IE = 0;
+    TMR0IE = 1;
     ei();
     INTCONbits.PEIE = 1;
     PIR1bits.RCIF = 0;
     PIE1bits.RCIE = 0;
-    RBIE = 1;
-    INT0IE = 1;
 }
 
 void initializeTimer1(){

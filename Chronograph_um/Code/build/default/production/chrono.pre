@@ -1327,14 +1327,9 @@ void fLCD_PrintString(char* String, char MSZ_String);
 void fLCD_ScrollDisplay(char Direction, char Num_Positions);
 void fLCD_ClearLine(char Line);
 
-# 59
+# 58
 int tflag = 0;
-unsigned int time = 0;
-double tdist = 0;
-double speed = 0;
-double fin = 0;
-double a = 0;
-double b = 0;
+int time = 0;
 
 void main(void) {
 
@@ -1342,21 +1337,16 @@ startUp();
 _delay((unsigned long)((120)*(8000000/4000.0)));
 fLCD_Start();
 
+PORTBbits.RB0 = 1;
+
 for(;;){
-tdist = time/(2);
-speed = 20.5/tdist;
-fin = (speed*1000*3.280839895);
-fLCD_PrintNumber((int)fin);
-fLCD_RawSend('.', 0x10);
-b = (fin-(int)fin)*1000;
-fLCD_PrintNumber((int)b);
-_delay((unsigned long)((100)*(8000000/4000.0)));
+fLCD_PrintNumber(380);
+fLCD_PrintString("fps",3);
+_delay((unsigned long)((1000)*(8000000/4000.0)));
 
-fLCD_Clear();
+# 80
 }
 }
-
-
 
 void fLCD_Start(){
 PORTB = 0;
@@ -1384,7 +1374,7 @@ PORTB = 0;
 PORTA = 0;
 pt = ((in >> 4) & 0x0f);
 if(pt & 0x01)
-PORTBbits.RB4 = 1;
+PORTBbits.RB0 = 1;
 if(pt & 0x02)
 PORTBbits.RB1 = 1;
 if(pt & 0x04)
@@ -1392,21 +1382,21 @@ PORTBbits.RB2 = 1;
 if(pt & 0x08)
 PORTBbits.RB3 = 1;
 if(mask)
-PORTAbits.RA1 = 1;
+PORTBbits.RB4 = 1;
 _delay((unsigned long)((120)*(8000000/4000000.0)));
-PORTAbits.RA0 = 1;
+PORTBbits.RB5 = 1;
 _delay((unsigned long)((120)*(8000000/4000000.0)));
-PORTAbits.RA0 = 0;
+PORTBbits.RB5 = 0;
 pt = (in & 0x0f);
 _delay((unsigned long)((120)*(8000000/4000000.0)));
-PORTBbits.RB4 = 0;
+PORTBbits.RB0 = 0;
 PORTBbits.RB1 = 0;
 PORTBbits.RB2 = 0;
 PORTBbits.RB3 = 0;
-PORTAbits.RA1 = 0;
-PORTAbits.RA0 = 0;
+PORTBbits.RB4 = 0;
+PORTBbits.RB5 = 0;
 if(pt & 0x01)
-PORTBbits.RB4 = 1;
+PORTBbits.RB0 = 1;
 if(pt & 0x02)
 PORTBbits.RB1 = 1;
 if(pt & 0x04)
@@ -1414,11 +1404,11 @@ PORTBbits.RB2 = 1;
 if(pt & 0x08)
 PORTBbits.RB3 = 1;
 if(mask)
-PORTAbits.RA1 = 1;
+PORTBbits.RB4 = 1;
 _delay((unsigned long)((120)*(8000000/4000000.0)));
-PORTAbits.RA0 = 1;
+PORTBbits.RB5 = 1;
 _delay((unsigned long)((120)*(8000000/4000000.0)));
-PORTAbits.RA0 = 0;
+PORTBbits.RB5 = 0;
 _delay((unsigned long)((120)*(8000000/4000000.0)));
 }
 
@@ -1441,13 +1431,13 @@ _delay((unsigned long)((2)*(8000000/4000.0)));
 
 void fLCD_Cursor(char x, char y){
 
-# 177
+# 171
 if (y==0)
 y=0x80;
 else
 y=0xc0;
 
-# 203
+# 197
 fLCD_RawSend(y+x, 0);
 _delay((unsigned long)((2)*(8000000/4000.0)));
 }
@@ -1542,16 +1532,17 @@ void fLCD_ClearLine(char Line){
 char count;
 char rowcount;
 
-# 302
+# 296
 rowcount=40;
 
-# 313
+# 307
 fLCD_Cursor(0, Line);
 
 for(count=0; count<rowcount; count++)
 fLCD_RawSend(' ', 0x10);
 fLCD_Cursor(0,Line);
 }
+
 void startUp(){
 OSCCON = 0x70;
 
@@ -1560,7 +1551,7 @@ CMCON = 0x07;
 
 OPTION_REG = 0xc0;
 
-TRISB = 0b00100001;
+TRISB = 0b00000000;
 TRISA = 0b00000000;
 PORTB = 0;
 PORTA = 0;
@@ -1570,40 +1561,20 @@ initializeTimer0();
 initializeTimer1();
 }
 
-# 341
+# 336
 void interrupt isr(void){
 
-if(RBIF){
-RBIF = 0;
-time = TMR1;
-tflag = PORTBbits.RB5;
-
-# 358
-}
-if(INT0IF){
-INT0IF = 0;
-
-TMR1 = 0;
-}
-
-if(TMR1IF){
-TMR1IF = 0;
-
-}
-
-# 374
+# 356
 }
 
 
 void initializeInt(){
 TMR1IE = 1;
-TMR0IE = 0;
+TMR0IE = 1;
 (GIE = 1);
 INTCONbits.PEIE = 1;
 PIR1bits.RCIF = 0;
 PIE1bits.RCIE = 0;
-RBIE = 1;
-INT0IE = 1;
 }
 
 void initializeTimer1(){

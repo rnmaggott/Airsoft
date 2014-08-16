@@ -10,7 +10,7 @@
 #include <math.h>
 
 // CONFIG1
-#pragma config FOSC = INTOSCIO  // Oscillator Selection bits (INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin)
+#pragma config FOSC = HS//INTOSCIO  // Oscillator Selection bits (INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = ON       // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is MCLR)
@@ -44,7 +44,7 @@ void fLCD_ClearLine(char Line);
 
 
 //Defines
-#define _XTAL_FREQ 8000000      // Internal Oscillator set to 8Mhz
+#define _XTAL_FREQ 19660800//8000000      // Internal Oscillator set to 8Mhz
 #define LCD_0 PORTBbits.RB4
 #define LCD_1 PORTBbits.RB1
 #define LCD_2 PORTBbits.RB2
@@ -71,7 +71,7 @@ void main(void) {
     fLCD_Start();
     
     for(;;){
-        tdist = time/(2);
+        tdist = time/(19.6608/4);
         speed = 20.5/tdist;
         fin = (speed*1000*3.280839895);
         fLCD_PrintNumber((int)fin);
@@ -325,7 +325,7 @@ void startUp(){
     OPTION_REG = 0xc0;
 
     TRISB = 0b00100001;//Set input (pin 3,4,5,7,8) and output (pin 1,2,6)
-    TRISA = 0b00000000;
+    TRISA = 0b11000000;
     PORTB = 0;//Set initial output to 0
     PORTA = 0;
 
@@ -341,9 +341,9 @@ void startUp(){
 void interrupt isr(void){
 
     if(RBIF){
-        RBIF = 0;
         time = TMR1;
-        tflag = PORTBbits.RB5;
+        RBIF = 0;
+        //tflag = PORTBbits.RB5;
         //TMR1 = 0;
         //TMR1IE = 0;
         //TMR1IE = 1;
@@ -357,9 +357,10 @@ void interrupt isr(void){
         }*/
     }
     if(INT0IF){
+        TMR1 = 0;
         INT0IF = 0;
         //TMR1IE = 1;
-        TMR1 = 0;
+        
     }
 	//Timer1 Interrupt
     if(TMR1IF){
@@ -386,9 +387,9 @@ void initializeInt(){
 }
 
 void initializeTimer1(){
-    T1CONbits.T1CKPS = 0b00;    //Find the proper value for this (Prescaler)
+    T1CONbits.T1CKPS = 0b10;    //Find the proper value for this (Prescaler)
     T1CONbits.T1OSCEN = 1;      //Oscillator Enabled
-    T1CONbits.TMR1CS = 0;       //Internal Clock Source (FOSC/4)
+    T1CONbits.TMR1CS = 1;       //External Clock Source
     T1CONbits.TMR1ON = 1;       //Enable timer 1
 }
 

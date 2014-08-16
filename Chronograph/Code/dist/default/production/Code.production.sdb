@@ -128,11 +128,11 @@
 [v _startUp startUp `(v  1 e 0 0 ]
 "341
 [v _isr isr `II(v  1 e 0 0 ]
-"377
+"378
 [v _initializeInt initializeInt `(v  1 e 0 0 ]
-"388
+"389
 [v _initializeTimer1 initializeTimer1 `(v  1 e 0 0 ]
-"396
+"397
 [v _initializeTimer0 initializeTimer0 `(v  1 e 0 0 ]
 "155 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16f88.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -280,39 +280,39 @@
 "29 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\lwtoft.c
 [v ___lwtoft __lwtoft `(f  1 e 3 0 ]
 {
-[v ___lwtoft@c c `ui  1 p 2 8 ]
+[v ___lwtoft@c c `ui  1 p 2 5 ]
 "31
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
 {
 "47
-[v ___fttol@lval lval `ul  1 a 4 9 ]
+[v ___fttol@lval lval `ul  1 a 4 5 ]
 "46
-[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
-[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
+[v ___fttol@exp1 exp1 `uc  1 a 1 9 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 4 ]
 "45
-[v ___fttol@f1 f1 `f  1 p 3 0 ]
+[v ___fttol@f1 f1 `f  1 p 3 4 ]
 "73
 } 0
 "16 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c
 [v ___ftneg __ftneg `(f  1 e 3 0 ]
 {
-[v ___ftneg@f1 f1 `f  1 p 3 20 ]
+[v ___ftneg@f1 f1 `f  1 p 3 16 ]
 "20
 } 0
 "52 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
 {
 "54
-[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 47 ]
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 43 ]
 "53
-[v ___ftmul@sign sign `uc  1 a 1 51 ]
-[v ___ftmul@cntr cntr `uc  1 a 1 50 ]
-[v ___ftmul@exp exp `uc  1 a 1 46 ]
+[v ___ftmul@sign sign `uc  1 a 1 47 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 46 ]
+[v ___ftmul@exp exp `uc  1 a 1 42 ]
 "52
-[v ___ftmul@f1 f1 `f  1 p 3 36 ]
-[v ___ftmul@f2 f2 `f  1 p 3 39 ]
+[v ___ftmul@f1 f1 `f  1 p 3 32 ]
+[v ___ftmul@f2 f2 `f  1 p 3 35 ]
 "84
 } 0
 "50 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftdiv.c
@@ -333,21 +333,21 @@
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
 {
 "88
-[v ___ftadd@exp1 exp1 `uc  1 a 1 35 ]
-[v ___ftadd@exp2 exp2 `uc  1 a 1 34 ]
-[v ___ftadd@sign sign `uc  1 a 1 33 ]
+[v ___ftadd@exp1 exp1 `uc  1 a 1 31 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 30 ]
+[v ___ftadd@sign sign `uc  1 a 1 29 ]
 "87
-[v ___ftadd@f1 f1 `f  1 p 3 23 ]
-[v ___ftadd@f2 f2 `f  1 p 3 26 ]
+[v ___ftadd@f1 f1 `f  1 p 3 19 ]
+[v ___ftadd@f2 f2 `f  1 p 3 22 ]
 "148
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
 {
 "34
-[v ___awtoft@sign sign `uc  1 a 1 19 ]
+[v ___awtoft@sign sign `uc  1 a 1 15 ]
 "33
-[v ___awtoft@c c `i  1 p 2 14 ]
+[v ___awtoft@c c `i  1 p 2 10 ]
 "42
 } 0
 "63 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\float.c
@@ -362,24 +362,24 @@
 [v _fLCD_PrintNumber fLCD_PrintNumber `(v  1 e 0 0 ]
 {
 "208
-[v fLCD_PrintNumber@tmp_int tmp_int `s  1 a 2 17 ]
+[v fLCD_PrintNumber@tmp_int tmp_int `s  1 a 2 13 ]
 "209
-[v fLCD_PrintNumber@tmp_byte tmp_byte `uc  1 a 1 19 ]
+[v fLCD_PrintNumber@tmp_byte tmp_byte `uc  1 a 1 15 ]
 "207
-[v fLCD_PrintNumber@Number Number `s  1 p 2 14 ]
+[v fLCD_PrintNumber@Number Number `s  1 p 2 10 ]
 "256
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "6
-[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+[v ___awdiv@quotient quotient `i  1 a 2 3 ]
 "7
-[v ___awdiv@sign sign `uc  1 a 1 6 ]
-[v ___awdiv@counter counter `uc  1 a 1 5 ]
+[v ___awdiv@sign sign `uc  1 a 1 2 ]
+[v ___awdiv@counter counter `uc  1 a 1 1 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 0 ]
-[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
 "37
 } 0
 "89 C:\Users\Ryan\Documents\GitHub\Airsoft\Chronograph\Code\chrono.c
@@ -395,12 +395,12 @@
 "109
 [v _fLCD_RawSend fLCD_RawSend `(v  1 e 0 0 ]
 {
-[v fLCD_RawSend@in in `uc  1 a 1 3 ]
+[v fLCD_RawSend@in in `uc  1 a 1 0 ]
 "110
-[v fLCD_RawSend@pt pt `uc  1 a 1 4 ]
+[v fLCD_RawSend@pt pt `uc  1 a 1 1 ]
 "109
-[v fLCD_RawSend@in in `uc  1 a 1 3 ]
-[v fLCD_RawSend@mask mask `uc  1 p 1 0 ]
+[v fLCD_RawSend@in in `uc  1 a 1 0 ]
+[v fLCD_RawSend@mask mask `uc  1 p 1 4 ]
 "151
 } 0
 "319
@@ -408,23 +408,23 @@
 {
 "335
 } 0
-"388
+"389
 [v _initializeTimer1 initializeTimer1 `(v  1 e 0 0 ]
 {
-"393
+"394
 } 0
-"396
+"397
 [v _initializeTimer0 initializeTimer0 `(v  1 e 0 0 ]
 {
-"400
+"401
 } 0
-"377
+"378
 [v _initializeInt initializeInt `(v  1 e 0 0 ]
 {
-"386
+"387
 } 0
 "341
 [v _isr isr `II(v  1 e 0 0 ]
 {
-"374
+"375
 } 0

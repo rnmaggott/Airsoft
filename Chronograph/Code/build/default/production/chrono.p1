@@ -1051,7 +1051,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;math.h: 27: extern double trunc(double);
 [; ;math.h: 28: extern double round(double);
 "13 chrono.c
-[p x FOSC=INTOSCIO ]
+[p x FOSC=HS ]
 "14
 [p x WDTE=OFF ]
 "15
@@ -1140,9 +1140,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 69: startUp();
 "69
 [e ( _startUp ..  ]
-[; ;chrono.c: 70: _delay((unsigned long)((120)*(8000000/4000.0)));
+[; ;chrono.c: 70: _delay((unsigned long)((120)*(19660800/4000.0)));
 "70
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 71: fLCD_Start();
 "71
 [e ( _fLCD_Start ..  ]
@@ -1151,9 +1151,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [e :U 90 ]
 {
-[; ;chrono.c: 74: tdist = time/(2);
+[; ;chrono.c: 74: tdist = time/(19.6608/4);
 "74
-[e = _tdist -> / _time -> -> 2 `i `ui `d ]
+[e = _tdist / -> _time `d / .19.6608 -> -> 4 `i `d ]
 [; ;chrono.c: 75: speed = 20.5/tdist;
 "75
 [e = _speed / .20.5 _tdist ]
@@ -1172,9 +1172,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 80: fLCD_PrintNumber((int)b);
 "80
 [e ( _fLCD_PrintNumber (1 -> -> _b `i `s ]
-[; ;chrono.c: 81: _delay((unsigned long)((100)*(8000000/4000.0)));
+[; ;chrono.c: 81: _delay((unsigned long)((100)*(19660800/4000.0)));
 "81
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 83: fLCD_Clear();
 "83
 [e ( _fLCD_Clear ..  ]
@@ -1200,45 +1200,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 91: PORTA = 0;
 "91
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;chrono.c: 92: _delay((unsigned long)((12)*(8000000/4000.0)));
+[; ;chrono.c: 92: _delay((unsigned long)((12)*(19660800/4000.0)));
 "92
-[e ( __delay (1 -> * -> -> 12 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 12 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 93: fLCD_RawSend(0x33, 0);
 "93
 [e ( _fLCD_RawSend (2 , -> -> 51 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 94: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 94: _delay((unsigned long)((2)*(19660800/4000.0)));
 "94
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 95: fLCD_RawSend(0x33, 0);
 "95
 [e ( _fLCD_RawSend (2 , -> -> 51 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 96: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 96: _delay((unsigned long)((2)*(19660800/4000.0)));
 "96
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 97: fLCD_RawSend(0x32, 0);
 "97
 [e ( _fLCD_RawSend (2 , -> -> 50 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 98: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 98: _delay((unsigned long)((2)*(19660800/4000.0)));
 "98
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 99: fLCD_RawSend(0x2c, 0);
 "99
 [e ( _fLCD_RawSend (2 , -> -> 44 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 100: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 100: _delay((unsigned long)((2)*(19660800/4000.0)));
 "100
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 101: fLCD_RawSend(0x06, 0);
 "101
 [e ( _fLCD_RawSend (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 102: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 102: _delay((unsigned long)((2)*(19660800/4000.0)));
 "102
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 103: fLCD_RawSend(0x0c, 0);
 "103
 [e ( _fLCD_RawSend (2 , -> -> 12 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 104: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 104: _delay((unsigned long)((2)*(19660800/4000.0)));
 "104
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 106: fLCD_Clear();
 "106
 [e ( _fLCD_Clear ..  ]
@@ -1301,24 +1301,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "123
 [e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
 [e :U 99 ]
-[; ;chrono.c: 124: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 124: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "124
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 125: PORTAbits.RA0 = 1;
 "125
 [e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
-[; ;chrono.c: 126: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 126: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "126
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 127: PORTAbits.RA0 = 0;
 "127
 [e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
 [; ;chrono.c: 128: pt = (in & 0x0f);
 "128
 [e = _pt -> & -> _in `i -> 15 `i `uc ]
-[; ;chrono.c: 129: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 129: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "129
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 130: PORTBbits.RB4 = 0;
 "130
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
@@ -1372,21 +1372,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "145
 [e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
 [e :U 104 ]
-[; ;chrono.c: 146: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 146: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "146
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 147: PORTAbits.RA0 = 1;
 "147
 [e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
-[; ;chrono.c: 148: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 148: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "148
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 149: PORTAbits.RA0 = 0;
 "149
 [e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
-[; ;chrono.c: 150: _delay((unsigned long)((120)*(8000000/4000000.0)));
+[; ;chrono.c: 150: _delay((unsigned long)((120)*(19660800/4000000.0)));
 "150
-[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 19660800 `l `d .4000000.0 `ul ]
 [; ;chrono.c: 151: }
 "151
 [e :UE 94 ]
@@ -1400,15 +1400,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 155: fLCD_RawSend(0x01, 0);
 "155
 [e ( _fLCD_RawSend (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 156: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 156: _delay((unsigned long)((2)*(19660800/4000.0)));
 "156
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 157: fLCD_RawSend(0x02, 0);
 "157
 [e ( _fLCD_RawSend (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 158: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 158: _delay((unsigned long)((2)*(19660800/4000.0)));
 "158
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 159: }
 "159
 [e :UE 105 ]
@@ -1437,9 +1437,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 166: fLCD_RawSend(in, 0);
 "166
 [e ( _fLCD_RawSend (2 , _in -> -> 0 `i `uc ]
-[; ;chrono.c: 167: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 167: _delay((unsigned long)((2)*(19660800/4000.0)));
 "167
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 168: }
 "168
 [e :UE 107 ]
@@ -1469,9 +1469,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 203: fLCD_RawSend(y+x, 0);
 "203
 [e ( _fLCD_RawSend (2 , -> + -> _y `i -> _x `i `uc -> -> 0 `i `uc ]
-[; ;chrono.c: 204: _delay((unsigned long)((2)*(8000000/4000.0)));
+[; ;chrono.c: 204: _delay((unsigned long)((2)*(19660800/4000.0)));
 "204
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
 [; ;chrono.c: 205: }
 "205
 [e :UE 108 ]
@@ -1841,9 +1841,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;chrono.c: 327: TRISB = 0b00100001;
 "327
 [e = _TRISB -> -> 33 `i `uc ]
-[; ;chrono.c: 328: TRISA = 0b00000000;
+[; ;chrono.c: 328: TRISA = 0b11000000;
 "328
-[e = _TRISA -> -> 0 `i `uc ]
+[e = _TRISA -> -> 192 `i `uc ]
 [; ;chrono.c: 329: PORTB = 0;
 "329
 [e = _PORTB -> -> 0 `i `uc ]
@@ -1874,15 +1874,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "343
 [e $ ! _RBIF 157  ]
 {
-[; ;chrono.c: 344: RBIF = 0;
+[; ;chrono.c: 344: time = TMR1;
 "344
-[e = _RBIF -> -> 0 `i `b ]
-[; ;chrono.c: 345: time = TMR1;
-"345
 [e = _time -> _TMR1 `ui ]
-[; ;chrono.c: 346: tflag = PORTBbits.RB5;
-"346
-[e = _tflag -> . . _PORTBbits 0 5 `i ]
+[; ;chrono.c: 345: RBIF = 0;
+"345
+[e = _RBIF -> -> 0 `i `b ]
 "358
 }
 [e :U 157 ]
@@ -1891,103 +1888,103 @@ Version 3.2 HI-TECH Software Intermediate Code
 "359
 [e $ ! _INT0IF 158  ]
 {
-[; ;chrono.c: 360: INT0IF = 0;
+[; ;chrono.c: 360: TMR1 = 0;
 "360
-[e = _INT0IF -> -> 0 `i `b ]
-[; ;chrono.c: 362: TMR1 = 0;
-"362
 [e = _TMR1 -> -> 0 `i `us ]
-"363
+[; ;chrono.c: 361: INT0IF = 0;
+"361
+[e = _INT0IF -> -> 0 `i `b ]
+"364
 }
 [e :U 158 ]
-[; ;chrono.c: 363: }
-[; ;chrono.c: 365: if(TMR1IF){
-"365
+[; ;chrono.c: 364: }
+[; ;chrono.c: 366: if(TMR1IF){
+"366
 [e $ ! _TMR1IF 159  ]
 {
-[; ;chrono.c: 366: TMR1IF = 0;
-"366
+[; ;chrono.c: 367: TMR1IF = 0;
+"367
 [e = _TMR1IF -> -> 0 `i `b ]
-"368
+"369
 }
 [e :U 159 ]
-[; ;chrono.c: 368: }
-[; ;chrono.c: 374: }
-"374
+[; ;chrono.c: 369: }
+[; ;chrono.c: 375: }
+"375
 [e :UE 156 ]
 }
-"377
+"378
 [v _initializeInt `(v ~T0 @X0 1 ef ]
 {
-[; ;chrono.c: 377: void initializeInt(){
+[; ;chrono.c: 378: void initializeInt(){
 [e :U _initializeInt ]
 [f ]
-[; ;chrono.c: 378: TMR1IE = 1;
-"378
-[e = _TMR1IE -> -> 1 `i `b ]
-[; ;chrono.c: 379: TMR0IE = 0;
+[; ;chrono.c: 379: TMR1IE = 1;
 "379
-[e = _TMR0IE -> -> 0 `i `b ]
-[; ;chrono.c: 380: (GIE = 1);
+[e = _TMR1IE -> -> 1 `i `b ]
+[; ;chrono.c: 380: TMR0IE = 0;
 "380
-[e = _GIE -> -> 1 `i `b ]
-[; ;chrono.c: 381: INTCONbits.PEIE = 1;
+[e = _TMR0IE -> -> 0 `i `b ]
+[; ;chrono.c: 381: (GIE = 1);
 "381
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;chrono.c: 382: PIR1bits.RCIF = 0;
+[e = _GIE -> -> 1 `i `b ]
+[; ;chrono.c: 382: INTCONbits.PEIE = 1;
 "382
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;chrono.c: 383: PIE1bits.RCIE = 0;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;chrono.c: 383: PIR1bits.RCIF = 0;
 "383
-[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
-[; ;chrono.c: 384: RBIE = 1;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;chrono.c: 384: PIE1bits.RCIE = 0;
 "384
-[e = _RBIE -> -> 1 `i `b ]
-[; ;chrono.c: 385: INT0IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+[; ;chrono.c: 385: RBIE = 1;
 "385
-[e = _INT0IE -> -> 1 `i `b ]
-[; ;chrono.c: 386: }
+[e = _RBIE -> -> 1 `i `b ]
+[; ;chrono.c: 386: INT0IE = 1;
 "386
+[e = _INT0IE -> -> 1 `i `b ]
+[; ;chrono.c: 387: }
+"387
 [e :UE 160 ]
 }
-"388
+"389
 [v _initializeTimer1 `(v ~T0 @X0 1 ef ]
 {
-[; ;chrono.c: 388: void initializeTimer1(){
+[; ;chrono.c: 389: void initializeTimer1(){
 [e :U _initializeTimer1 ]
 [f ]
-[; ;chrono.c: 389: T1CONbits.T1CKPS = 0b00;
-"389
-[e = . . _T1CONbits 0 4 -> -> 0 `i `uc ]
-[; ;chrono.c: 390: T1CONbits.T1OSCEN = 1;
+[; ;chrono.c: 390: T1CONbits.T1CKPS = 0b11;
 "390
-[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
-[; ;chrono.c: 391: T1CONbits.TMR1CS = 0;
+[e = . . _T1CONbits 0 4 -> -> 3 `i `uc ]
+[; ;chrono.c: 391: T1CONbits.T1OSCEN = 1;
 "391
-[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
-[; ;chrono.c: 392: T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 3 -> -> 1 `i `uc ]
+[; ;chrono.c: 392: T1CONbits.TMR1CS = 0;
 "392
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-[; ;chrono.c: 393: }
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;chrono.c: 393: T1CONbits.TMR1ON = 1;
 "393
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;chrono.c: 394: }
+"394
 [e :UE 161 ]
 }
-"396
+"397
 [v _initializeTimer0 `(v ~T0 @X0 1 ef ]
 {
-[; ;chrono.c: 396: void initializeTimer0(){
+[; ;chrono.c: 397: void initializeTimer0(){
 [e :U _initializeTimer0 ]
 [f ]
-[; ;chrono.c: 397: OPTION_REGbits.T0CS = 0;
-"397
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-[; ;chrono.c: 398: OPTION_REGbits.PSA = 0;
+[; ;chrono.c: 398: OPTION_REGbits.T0CS = 0;
 "398
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-[; ;chrono.c: 399: OPTION_REGbits.PS = 0b100;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+[; ;chrono.c: 399: OPTION_REGbits.PSA = 0;
 "399
-[e = . . _OPTION_REGbits 0 0 -> -> 4 `i `uc ]
-[; ;chrono.c: 400: }
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+[; ;chrono.c: 400: OPTION_REGbits.PS = 0b100;
 "400
+[e = . . _OPTION_REGbits 0 0 -> -> 4 `i `uc ]
+[; ;chrono.c: 401: }
+"401
 [e :UE 162 ]
 }

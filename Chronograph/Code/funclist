@@ -1,21 +1,18 @@
-_startUp: CODE, 1832 0 26
-___ftneg: CODE, 1907 0 10
-___awdiv: CODE, 1555 0 93
-_fLCD_Clear: CODE, 1774 0 31
-___ftpack: CODE, 1343 0 106
-_fLCD_Start: CODE, 1449 0 106
-_main: CODE, 561 0 247
-___lwtoft: CODE, 1858 0 23
+_startUp: CODE, 1630 0 26
+___awdiv: CODE, 1429 0 93
+_fLCD_Clear: CODE, 1593 0 37
+___ftpack: CODE, 1325 0 104
+_fLCD_Start: CODE, 1199 0 126
+_main: CODE, 1522 0 71
+___lwtoft: CODE, 1656 0 19
 ___ftadd: CODE, 297 0 264
-__initialization: CODE, 1896 0 8
-_isr: CODE, 1805 0 27
-_initializeTimer0: CODE, 1917 0 9
-_initializeTimer1: CODE, 1934 0 8
-___ftmul: CODE, 808 0 210
-___awtoft: CODE, 1738 0 36
-_fLCD_RawSend: CODE, 1648 0 90
-_initializeInt: CODE, 1881 0 15
-___fttol: CODE, 1201 0 142
+__initialization: CODE, 1690 0 6
+_isr: CODE, 1071 0 128
+_initializeTimer0: CODE, 1699 0 9
+_initializeTimer1: CODE, 1716 0 8
+___ftmul: CODE, 561 0 208
+_fLCD_RawSend: CODE, 769 0 160
+_initializeInt: CODE, 1675 0 15
+___fttol: CODE, 929 0 142
 _fLCD_PrintNumber: CODE, 19 0 278
-___ftdiv: CODE, 1018 0 183
-Total: 1912
+Total: 1694

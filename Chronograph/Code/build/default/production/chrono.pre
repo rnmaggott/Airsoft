@@ -1295,7 +1295,7 @@ extern double round(double);
 
 
 # 13 "chrono.c"
-#pragma config FOSC = HS
+#pragma config FOSC = INTOSCIO
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
@@ -1329,28 +1329,26 @@ void fLCD_ClearLine(char Line);
 
 # 59
 int tflag = 0;
-unsigned int time = 0;
+int fflag = 0;
+double time = 0;
 double tdist = 0;
 double speed = 0;
 double fin = 0;
 double a = 0;
 double b = 0;
+double count = 0;
 
 void main(void) {
 
 startUp();
-_delay((unsigned long)((120)*(19660800/4000.0)));
+_delay((unsigned long)((120)*(8000000/4000.0)));
 fLCD_Start();
 
 for(;;){
-tdist = time/(19.6608/4);
-speed = 20.5/tdist;
-fin = (speed*1000*3.280839895);
-fLCD_PrintNumber((int)fin);
-fLCD_RawSend('.', 0x10);
-b = (fin-(int)fin)*1000;
-fLCD_PrintNumber((int)b);
-_delay((unsigned long)((100)*(19660800/4000.0)));
+
+# 83
+fLCD_PrintNumber(time);
+_delay((unsigned long)((100)*(8000000/4000.0)));
 
 fLCD_Clear();
 }
@@ -1361,19 +1359,19 @@ fLCD_Clear();
 void fLCD_Start(){
 PORTB = 0;
 PORTA = 0;
-_delay((unsigned long)((12)*(19660800/4000.0)));
+_delay((unsigned long)((12)*(8000000/4000.0)));
 fLCD_RawSend(0x33, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x33, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x32, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x2c, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x06, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x0c, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 
 fLCD_Clear();
 }
@@ -1393,12 +1391,12 @@ if(pt & 0x08)
 PORTBbits.RB3 = 1;
 if(mask)
 PORTAbits.RA1 = 1;
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 PORTAbits.RA0 = 1;
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 PORTAbits.RA0 = 0;
 pt = (in & 0x0f);
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 PORTBbits.RB4 = 0;
 PORTBbits.RB1 = 0;
 PORTBbits.RB2 = 0;
@@ -1415,19 +1413,19 @@ if(pt & 0x08)
 PORTBbits.RB3 = 1;
 if(mask)
 PORTAbits.RA1 = 1;
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 PORTAbits.RA0 = 1;
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 PORTAbits.RA0 = 0;
-_delay((unsigned long)((120)*(19660800/4000000.0)));
+_delay((unsigned long)((120)*(8000000/4000000.0)));
 }
 
 void fLCD_Clear(){
 
 fLCD_RawSend(0x01, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 fLCD_RawSend(0x02, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 }
 
 void fLCD_PrintASCII(char Character){
@@ -1436,20 +1434,20 @@ fLCD_RawSend(Character, 0x10);
 
 void fLCD_Command(char in){
 fLCD_RawSend(in, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 }
 
 void fLCD_Cursor(char x, char y){
 
-# 177
+# 180
 if (y==0)
 y=0x80;
 else
 y=0xc0;
 
-# 203
+# 206
 fLCD_RawSend(y+x, 0);
-_delay((unsigned long)((2)*(19660800/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 }
 
 void fLCD_PrintNumber(short Number){
@@ -1542,10 +1540,10 @@ void fLCD_ClearLine(char Line){
 char count;
 char rowcount;
 
-# 302
+# 305
 rowcount=40;
 
-# 313
+# 316
 fLCD_Cursor(0, Line);
 
 for(count=0; count<rowcount; count++)
@@ -1570,18 +1568,24 @@ initializeTimer0();
 initializeTimer1();
 }
 
-# 341
+# 344
 void interrupt isr(void){
 
 if(RBIF){
-time = TMR1;
+tflag = PORTBbits.RB5;
 RBIF = 0;
+if(tflag == 1 && fflag == 1){
+time = TMR1 + count*16384;
+fflag = 0;
+}
 
-# 358
+# 365
 }
 if(INT0IF){
 TMR1 = 0;
 INT0IF = 0;
+count = 0;
+fflag = 1;
 
 
 }
@@ -1589,9 +1593,10 @@ INT0IF = 0;
 if(TMR1IF){
 TMR1IF = 0;
 
+count++;
 }
 
-# 375
+# 385
 }
 
 
@@ -1607,7 +1612,7 @@ INT0IE = 1;
 }
 
 void initializeTimer1(){
-T1CONbits.T1CKPS = 0b11;
+T1CONbits.T1CKPS = 0b00;
 T1CONbits.T1OSCEN = 1;
 T1CONbits.TMR1CS = 0;
 T1CONbits.TMR1ON = 1;

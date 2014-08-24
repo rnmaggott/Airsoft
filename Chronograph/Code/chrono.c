@@ -10,7 +10,7 @@
 #include <math.h>
 
 // CONFIG1
-#pragma config FOSC = HS//INTOSCIO  // Oscillator Selection bits (INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin)
+#pragma config FOSC = INTOSCIO  // Oscillator Selection bits (INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = ON       // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is MCLR)
@@ -44,7 +44,7 @@ void fLCD_ClearLine(char Line);
 
 
 //Defines
-#define _XTAL_FREQ 19660800//8000000      // Internal Oscillator set to 8Mhz
+#define _XTAL_FREQ 8000000      // Internal Oscillator set to 8Mhz
 #define LCD_0 PORTBbits.RB4
 #define LCD_1 PORTBbits.RB1
 #define LCD_2 PORTBbits.RB2
@@ -57,12 +57,14 @@ void fLCD_ClearLine(char Line);
 #define dist 0.0205
 
 int tflag = 0;          //Flag set when interrupt is triggered (4ms)
-unsigned int time = 0;
+int fflag = 0;
+double time = 0;
 double tdist = 0;
 double speed = 0;
 double fin = 0;
 double a = 0;
 double b = 0;
+double count = 0;
 
 void main(void) {
     
@@ -71,13 +73,15 @@ void main(void) {
     fLCD_Start();
     
     for(;;){
-        tdist = time/(19.6608/4);
-        speed = 20.5/tdist;
+        //23.077mm, 23.1mm, 
+        /*tdist = time/2;
+        speed = 23.6/tdist;
         fin = (speed*1000*3.280839895);
         fLCD_PrintNumber((int)fin);
         fLCD_RawSend('.', 0x10);
         b = (fin-(int)fin)*1000;
-        fLCD_PrintNumber((int)b);
+        fLCD_PrintNumber((int)b);*/
+        fLCD_PrintNumber(time);
         __delay_ms(100);
         //tflag++;
         fLCD_Clear();
@@ -317,7 +321,7 @@ void fLCD_ClearLine(char Line){
     fLCD_Cursor(0,Line);
 }
 void startUp(){
-    OSCCON = 0x70;//Set oscillator for 8MHz
+    OSCCON = 0x70;//Set oscillator for 2MHz
 
     ANSEL = 0;
     CMCON = 0x07;
@@ -341,9 +345,13 @@ void startUp(){
 void interrupt isr(void){
 
     if(RBIF){
-        time = TMR1;
+        tflag = PORTBbits.RB5;
         RBIF = 0;
-        //tflag = PORTBbits.RB5;
+        if(tflag == 1 && fflag == 1){
+            time = TMR1 + count*16384;
+            fflag = 0;
+        }
+        
         //TMR1 = 0;
         //TMR1IE = 0;
         //TMR1IE = 1;
@@ -359,6 +367,8 @@ void interrupt isr(void){
     if(INT0IF){
         TMR1 = 0;
         INT0IF = 0;
+        count = 0;
+        fflag = 1;
         //TMR1IE = 1;
         
     }
@@ -366,6 +376,7 @@ void interrupt isr(void){
     if(TMR1IF){
         TMR1IF = 0;
         //time++;
+        count++;
     }
     //timer0 interrupt
     /*if(TMR0IF){
@@ -387,9 +398,9 @@ void initializeInt(){
 }
 
 void initializeTimer1(){
-    T1CONbits.T1CKPS = 0b10;    //Find the proper value for this (Prescaler)
+    T1CONbits.T1CKPS = 0b00;    //Find the proper value for this (Prescaler)
     T1CONbits.T1OSCEN = 1;      //Oscillator Enabled
-    T1CONbits.TMR1CS = 1;       //External Clock Source
+    T1CONbits.TMR1CS = 0;       //Internal Oscillator
     T1CONbits.TMR1ON = 1;       //Enable timer 1
 }
 
